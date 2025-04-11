@@ -1,0 +1,208 @@
+body {
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden; /* Fixes header being clipped */
+}
+
+/* Header */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #bbb;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #b36aff;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 18px solid #b36aff;
+}
+
+.logo:hover .triangle {
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Main card */
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(20px);
+  background-color: #111;
+  padding: 30px 40px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(128, 0, 128, 0.3);
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+.card h1 {
+  font-size: 22px;
+  margin: 0 0 10px;
+  color: #fff;
+  text-shadow: 0 0 6px rgba(255, 0, 255, 0.1);
+}
+
+.location {
+  font-size: 14px;
+  color: #b36aff;
+  margin: 0;
+}
+
+.bio {
+  font-size: 13px;
+  color: #aaa;
+  margin-top: 10px;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0);
+  }
+}
+
+/* Social media icons */
+.socials {
+  position: absolute;
+  bottom: 320px;
+  width: 100%;
+  text-align: center;
+  font-size: 0;
+}
+
+.socials a {
+  font-size: 24px;
+  color: #b36aff;
+  margin: 0 12px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.socials a:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Contact section */
+.contact {
+  text-align: center;
+  padding: 320px 20px;
+  color: #fff;
+  opacity: 0;
+  animation: contactFadeIn 1s ease forwards;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.contact h2 {
+  font-size: 36px;
+  color: #b36aff;
+  margin-bottom: 10px;
+  text-shadow: 0 0 8px rgba(179, 106, 255, 0.2);
+}
+
+.contact .subtitle {
+  font-size: 16px;
+  color: #aaa;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+.contact .email {
+  display: inline-block;
+  font-size: 18px;
+  color: #b36aff;
+  text-decoration: none;
+  border: 1px solid #b36aff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(179, 106, 255, 0.15);
+}
+
+.contact .email:hover {
+  background-color: #b36aff;
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(179, 106, 255, 0.3);
+}
+.email-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.copy-btn {
+  background-color: transparent;
+  border: 1px solid #b36aff;
+  color: #b36aff;
+  padding: 6px 18px;
+  font-size: 14px;
+  border-radius: 999px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.copy-btn:hover {
+  background-color: #b36aff;
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(179, 106, 255, 0.2);
+}
+
+
+@keyframes contactFadeIn {
+  0% {
+    opacity: 0;
+    margin-top: 20px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}

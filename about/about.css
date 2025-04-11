@@ -1,0 +1,184 @@
+body {
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+ 
+}
+
+  /* Header */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #bbb;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #b36aff;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0);
+  }
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 18px solid #b36aff;
+}
+
+/* Continuous spin only when hovered */
+.logo:hover .triangle {
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+  .about-container {
+    max-width: 960px;
+    margin: auto;
+    padding: 100px 20px;
+    text-align: center;
+  }
+  
+  .about-container h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #ddd;
+    border-bottom: 2px solid #b36aff;
+    display: inline-block;
+    padding-bottom: 6px;
+  }
+  
+  .about-container .intro {
+    color: #aaa;
+    font-size: 15px;
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+  
+  /* Card grid */
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+  
+  .card {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(179, 106, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px rgba(179, 106, 255, 0.2);
+  }
+  
+  .card img {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+  
+  .card-text {
+    padding: 20px;
+  }
+  
+  .card-text h2 {
+    margin: 0 0 10px;
+    color: #fff;
+    font-size: 18px;
+  }
+  
+  .card-text p {
+    color: #ccc;
+    font-size: 14px;
+  }
+  
+  /* Books section */
+  .books {
+    background-color: #111;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(179, 106, 255, 0.1);
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .books h2 {
+    color: #b36aff;
+    margin-bottom: 10px;
+  }
+  
+  .books p {
+    color: #ccc;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .goodreads-btn {
+    background-color: transparent;
+    color: #b36aff;
+    border: 1px solid #b36aff;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .goodreads-btn:hover {
+    background-color: #b36aff;
+    color: #000;
+    box-shadow: 0 0 10px rgba(179, 106, 255, 0.3);
+  }
+  .section-block {
+    margin-bottom: 80px;
+  }
+  
+  .section-title {
+    font-size: 26px;
+    color: #b36aff;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #b36aff;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  

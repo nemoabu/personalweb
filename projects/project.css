@@ -43,13 +43,13 @@ body {
   nav a {
     margin-left: 20px;
     text-decoration: none;
-    color: #b36aff;
+    color: #bbb;
     font-size: 14px;
     transition: color 0.3s ease;
   }
   
   nav a:hover {
-    color: #fff;
+    color: #b36aff;
   }
   
   /* Project title above box */
