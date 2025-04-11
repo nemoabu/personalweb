@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #000;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 18px solid #b36aff;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo:hover .triangle {
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+  
+  nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #b36aff;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #fff;
+  }
+  
+  /* Project title above box */
+  .project-title {
+    text-align: center;
+    font-size: 24px;
+    margin: 60px 0 15px;
+    color: #b36aff;
+  }
+  
+  /* Main project box */
+  .project {
+    background-color: #111;
+    border: 1px solid #b36aff;
+    border-radius: 12px;
+    max-width: 1000px;
+    margin: 0 auto 60px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(179, 106, 255, 0.1);
+  }
+  
+  /* Layout for text + images side-by-side */
+  .preview-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .preview-text {
+    flex: 1;
+    min-width: 220px;
+  }
+  
+  .preview-text h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    color: #fff;
+  }
+  
+  .preview-text p {
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  .preview-imgs {
+    display: flex;
+    gap: 10px;
+    flex: 2;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  .preview-imgs img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(179, 106, 255, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .preview-imgs img:hover {
+    transform: scale(1.03);
+  }
+  
+  .project a {
+    display: inline-block;
+    color: #b36aff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: color 0.3s ease;
+    font-size: 14px;
+  }
+  
+  .project a:hover {
+    color: #fff;
+  }
+  
