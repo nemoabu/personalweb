@@ -1,7 +1,7 @@
 body {
     margin: 0;
-    background-color: #000;
-    color: #fff;
+    background: linear-gradient(to bottom, #0a0a0a, #000);
+    color: #ddd;
     font-family: 'Segoe UI', sans-serif;
   }
   
@@ -27,7 +27,7 @@ body {
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 18px solid #b36aff;
+    border-bottom: 18px solid #8b57d1; /* softened */
     transition: transform 0.3s ease;
   }
   
@@ -43,13 +43,13 @@ body {
   nav a {
     margin-left: 20px;
     text-decoration: none;
-    color: #bbb;
+    color: #888; /* more subtle */
     font-size: 14px;
     transition: color 0.3s ease;
   }
   
   nav a:hover {
-    color: #b36aff;
+    color: #ae7fff; /* softened hover */
   }
   
   /* Project title above box */
@@ -57,18 +57,18 @@ body {
     text-align: center;
     font-size: 24px;
     margin: 60px 0 15px;
-    color: #b36aff;
+    color: #9c6adf; /* less neon */
   }
   
   /* Main project box */
   .project {
     background-color: #111;
-    border: 1px solid #b36aff;
+    border: 1px solid #444; /* more subtle border */
     border-radius: 12px;
     max-width: 1000px;
     margin: 0 auto 60px;
     padding: 30px;
-    box-shadow: 0 0 20px rgba(179, 106, 255, 0.1);
+    box-shadow: 0 0 10px rgba(140, 90, 200, 0.05); /* reduced glow */
   }
   
   /* Layout for text + images side-by-side */
@@ -88,12 +88,12 @@ body {
   .preview-text h3 {
     margin: 0 0 8px;
     font-size: 18px;
-    color: #fff;
+    color: #eee;
   }
   
   .preview-text p {
     font-size: 14px;
-    color: #ccc;
+    color: #aaa;
   }
   
   .preview-imgs {
@@ -108,17 +108,17 @@ body {
     width: 200px;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(179, 106, 255, 0.2);
+    box-shadow: 0 0 6px rgba(140, 90, 200, 0.1); /* toned down */
     transition: transform 0.3s ease;
   }
   
   .preview-imgs img:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
   }
   
   .project a {
     display: inline-block;
-    color: #b36aff;
+    color: #ae7fff; /* softened purple */
     text-decoration: none;
     font-weight: bold;
     margin-top: 15px;
@@ -127,6 +127,6 @@ body {
   }
   
   .project a:hover {
-    color: #fff;
+    color: #ddd; /* subtle hover */
   }
   
