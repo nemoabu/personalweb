@@ -28,6 +28,19 @@ nav a {
   color: #bbb;
   font-size: 14px;
   transition: color 0.3s ease;
+  
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeInNav 0.6s ease forwards;
+}
+nav a:nth-child(1) { animation-delay: 0.3s; }
+nav a:nth-child(2) { animation-delay: 0.4s; }
+nav a:nth-child(3) { animation-delay: 0.5s; }
+
+@keyframes fadeInNav {
+  to {
+    opacity: 1;
+  }
 }
 
 nav a:hover {
@@ -202,5 +215,20 @@ nav a:hover {
   nav a {
     font-size: 12px;
     margin-left: 12px;
+  }
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInNav {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
