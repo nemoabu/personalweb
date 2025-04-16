@@ -1,10 +1,11 @@
+/* Reset + Base */
 body {
   margin: 0;
   background-color: #000;
   color: #fff;
-  height: 100vh;
   font-family: 'Segoe UI', sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 /* Header */
@@ -18,9 +19,8 @@ header {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  z-index: 10;
 }
-
-
 
 nav a {
   margin-left: 20px;
@@ -34,12 +34,47 @@ nav a:hover {
   color: #b36aff;
 }
 
-/* Centered Card */
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 18px solid #b36aff;
+}
+
+.logo:hover .triangle {
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Main content layout */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* align items starting from top */
+  padding: 300px 20px 60px; /* <--- increase top padding here */
+  gap: 40px;
+  box-sizing: border-box;
+}
+
+
+/* Card */
 .card {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) translateY(20px);
   background-color: #111;
   padding: 30px 40px;
   border-radius: 14px;
@@ -47,9 +82,9 @@ nav a:hover {
   box-shadow: 0 0 20px rgba(128, 0, 128, 0.3);
   animation: fadeInUp 1s ease-out forwards;
   opacity: 0;
+  transform: translateY(20px);
 }
 
-/* Text styles */
 .card h1 {
   font-size: 22px;
   margin: 0 0 10px;
@@ -69,67 +104,37 @@ nav a:hover {
   margin-top: 10px;
 }
 
-/* Animation */
+/* Card animation */
 @keyframes fadeInUp {
   to {
     opacity: 1;
-    transform: translate(-50%, -50%) translateY(0);
+    transform: translateY(0);
   }
 }
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: bold;
-  font-size: 18px;
-  color: white;
-}
 
-.triangle {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 18px solid #b36aff;
-}
-
-/* Continuous spin only when hovered */
-.logo:hover .triangle {
-  animation: spin 1.2s linear infinite;
-}
-
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
+/* Social icons */
 .socials {
-  position: absolute;
-  bottom: 320px;
-  width: 100%;
   text-align: center;
   font-size: 0;
 }
 
 .socials a {
-  font-size: 24px; /* re-apply font size to icon links */
+  font-size: 24px;
   color: #b36aff;
   margin: 0 12px;
   transition: color 0.3s ease, transform 0.3s ease;
   display: inline-block;
 }
 
-
 .socials a:hover {
   color: #fff;
   transform: scale(1.1);
 }
 
-
+/* Tech stack */
 .tech-stack {
-  position: absolute;
-  bottom: 120px; /* adjust if needed */
-  width: 100%;
   text-align: center;
+  max-width: 90%;
 }
 
 .tech-stack h2 {
@@ -141,11 +146,10 @@ nav a:hover {
 .tech-icons {
   display: flex;
   justify-content: center;
-  gap: 25px;
   flex-wrap: wrap;
+  gap: 25px;
 }
 
-/* Base + animation */
 .tech-icons img {
   width: 40px;
   height: 40px;
@@ -155,14 +159,13 @@ nav a:hover {
   animation: fadeInScale 0.6s ease forwards;
   transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
 }
-/* On hover: pop & color */
+
 .tech-icons img:hover {
   transform: scale(1.1);
   opacity: 1;
   filter: grayscale(0%) brightness(100%);
 }
 
-/* Fade + scale in */
 @keyframes fadeInScale {
   0% {
     opacity: 0;
@@ -174,7 +177,7 @@ nav a:hover {
   }
 }
 
-/* Staggered entrance delays */
+/* Staggered animation delays */
 .tech-icons img:nth-child(1) { animation-delay: 0.1s; }
 .tech-icons img:nth-child(2) { animation-delay: 0.2s; }
 .tech-icons img:nth-child(3) { animation-delay: 0.3s; }
@@ -184,3 +187,20 @@ nav a:hover {
 .tech-icons img:nth-child(7) { animation-delay: 0.7s; }
 .tech-icons img:nth-child(8) { animation-delay: 0.8s; }
 .tech-icons img:nth-child(9) { animation-delay: 0.9s; }
+
+/* Responsive tweaks */
+@media (max-width: 500px) {
+  .card {
+    padding: 25px 20px;
+  }
+
+  .tech-icons img {
+    width: 32px;
+    height: 32px;
+  }
+
+  nav a {
+    font-size: 12px;
+    margin-left: 12px;
+  }
+}
