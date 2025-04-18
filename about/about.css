@@ -4,13 +4,10 @@ body {
   color: #fff;
   height: 100vh;
   font-family: 'Segoe UI', sans-serif;
-  animation: bodyFade 0.8s ease-in;
+  
 }
 
-@keyframes bodyFade {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
+
 
 /* Header */
 body {
@@ -19,13 +16,9 @@ body {
   color: #fff;
   height: 100vh;
   font-family: 'Segoe UI', sans-serif;
-  animation: bodyFade 0.8s ease-in;
+  
 }
 
-@keyframes bodyFade {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
 
 /* Header (No Animations) */
 header {
