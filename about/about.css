@@ -20,7 +20,6 @@ body {
 }
 
 
-/* Header (No Animations) */
 header {
   position: absolute;
   top: 0;
@@ -31,7 +30,10 @@ header {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  z-index: 999; /* <-- add this */
+  background-color: #000; /* ensure it's not transparent */
 }
+
 
 
 nav a {
@@ -114,7 +116,10 @@ nav a:nth-child(3) { animation-delay: 0.5s; }
   padding: 100px 20px;
   text-align: center;
   animation: fadeSlideIn 1s ease forwards;
+  position: relative;
+  z-index: 1;
 }
+
 
 @keyframes fadeSlideIn {
   from {
