@@ -223,3 +223,15 @@ nav a:hover {
     transform: scale(1.3);
   }
 }
+.tech {
+  font-weight: bold;
+  color: #c8a2ff;
+  transition: color 0.3s ease;
+  text-decoration: none !important;
+}
+
+.tech:hover {
+  color: #b266ff;
+  cursor: pointer;
+  text-decoration: none !important;
+}
