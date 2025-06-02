@@ -203,22 +203,6 @@ nav a:hover {
 .tech-icons img:nth-child(11) { animation-delay: 1.1s; }
 
 
-/* Responsive tweaks */
-@media (max-width: 500px) {
-  .card {
-    padding: 25px 20px;
-  }
-
-  .tech-icons img {
-    width: 32px;
-    height: 32px;
-  }
-
-  nav a {
-    font-size: 12px;
-    margin-left: 12px;
-  }
-}
 
 /* Keyframes */
 @keyframes fadeInUp {
