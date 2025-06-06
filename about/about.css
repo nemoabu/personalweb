@@ -129,12 +129,12 @@ nav a:hover {
 }
 
 .about-container h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-  color: #ddd;
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #b36aff;
   border-bottom: 2px solid #b36aff;
   display: inline-block;
-  padding-bottom: 6px;
+  padding-bottom: 5px;
 }
 
 .about-container .intro {
@@ -281,4 +281,99 @@ nav a:hover {
   .section-title {
     font-size: 20px;
   }
+}
+.about-me-box.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1a1a1a;
+  padding: 30px 40px;
+  border-radius: 14px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(128, 0, 128, 0.1);
+  color: white;
+  font-family: Arial, sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-me-box.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(179, 106, 255, 0.2);
+}
+
+/* Left side text */
+.about-text {
+  max-width: 70%;
+  text-align: left;
+}
+
+.school-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* keeps it responsive */
+}
+
+.school-label {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #c8a2ff;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.school-label:hover {
+  color: #b266ff;
+  text-decoration: none;
+}
+
+.school-logo {
+  width: 40px !important;
+  height: 40px !important;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(80%);
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeInScale 0.6s ease forwards;
+  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+}
+
+.school-logo:hover {
+  transform: scale(1.1);
+  opacity: 1;
+  filter: grayscale(0%) brightness(100%);
+}
+
+.location {
+  font-weight: 600;
+  font-size: 1rem;
+}
+.about-text h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  color: #b36aff;
+}
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.about-pic img {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.bio {
+  margin-top: 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ddd;
+  text-align: left;
 }
