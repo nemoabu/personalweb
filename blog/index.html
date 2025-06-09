@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog — Abdullokh</title>
+  <link rel="stylesheet" href="blog.css" />
+  <link rel="icon" href="../fav.png" type="image/png">
+</head>
+<body>
+  <header>
+    <a href="/" class="logo">
+      <div class="triangle"></div>
+    </a>
+    <nav>
+      <a href="../about/">About</a>
+      <a href="../projects/">Projects</a>
+      <a href="../blog/">Blog</a>
+      <a href="../contact/">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1><span class="typing-container">Blog</span></h1>
+
+    <div class="blog-disclaimer" onclick="toggleDisclaimer(this)">
+      <p>Click to view my blog posts. Here, I share my thoughts on technology, business, and society. These are personal opinions and deep dives into complex topics. I aim to be direct and honest in my analysis, which might sometimes challenge conventional views. Feel free to disagree — that's what makes these discussions valuable.</p>
+      <span class="disclaimer-icon">+</span>
+    </div>
+    
+    <div class="blog-posts" style="display: none;">
+      <article class="blog-post">
+        <div class="blog-header" onclick="togglePost(this)">
+          <h2>Rethinking Crypto: Why Bitcoin and Monero Might Be the Only Coins That Matter</h2>
+          <span class="toggle-icon">+</span>
+        </div>
+        <div class="blog-content">
+          <div class="blog-intro">
+            <p>The crypto space is loud — flooded with thousands of coins, constant hype cycles, and endless promises of revolution. There are 2 to truly consider.</p>
+            <p>Main keys for a good coin: decentralization, financial autonomy, and censorship resistance. Everything else? Mostly centralized noise.</p>
+          </div>
+
+          <div class="blog-section">
+            <h3>Bitcoin as Digital Gold</h3>
+            <div class="image-container">
+              <img src="images/bcgold.png" alt="Bitcoin as Digital Gold" class="blog-image">
+            </div>
+            <p>Bitcoin is often praised for its fixed supply — 21 million coins. That means no inflation, no printing, no gradual erosion of value like we see with fiat currencies. It's become a sort of digital gold, a store of value that can't be tampered with.</p>
+            <p>But this same feature brings serious challenges:</p>
+            <ul>
+              <li><strong>Hoarding, not spending:</strong> Once all 21 million bitcoins are mined, the fixed supply means if demand grows, people will hold rather than spend, expecting its value to rise.</li>
+              <li><strong>Bad for daily use:</strong> Because of this hoarding tendency, Bitcoin becomes more like a vaulted asset than money you'd use for everyday purchases like a sandwich.</li>
+              <li><strong>Slow and expensive:</strong> Transactions can be slow and costly, especially when the network is busy, making it impractical for quick payments. Like think about it, if u try to just buy a coffee you are not trying to wait 10 minutes for the transaction to go through.</li>
+              <li><strong>Public and traceable:</strong> Every transaction is recorded publicly and can be tracked by anyone, offering little privacy.</li>
+              <li><strong>Mining challenges ahead:</strong> After mining ends (around 2140), miners will rely only on transaction fees. If fees aren't high enough, fewer miners may stay, causing slower confirmations and higher costs.</li>
+            </ul>
+          </div>
+
+          <div class="blog-section">
+            <h3>The Problem with Gold (and Bitcoin as the New Gold Standard)</h3>
+            <div class="image-container">
+              <img src="images/scrudge.jpg" alt="Gold Standard History" class="blog-image">
+            </div>
+            <p>Some Bitcoiners treat it like the rebirth of the gold standard — a fixed-supply, value-backed system. But here's the thing: the gold standard failed, and many don't understand issues with the gold standard.</p>
+            <ul>
+              <li>Countries with the most gold controlled global trade.</li>
+              <li>Smaller, resource-poor nations were left powerless.</li>
+              <li>Economic imbalances led to exploitation, wars, famine and collapse during global crises, the printing of money is seen as a bad thing "inflation" but it is key during huge economic distress to recover.</li>
+            </ul>
+          </div>
+
+          <div class="blog-section">
+            <h3>Monero: The Privacy Coin That Actually Works</h3>
+            <div class="image-container">
+              <img src="images/monero.jpg" alt="Monero Privacy Features" class="blog-image">
+            </div>
+            <p>If Bitcoin is digital gold, Monero is digital cash — and maybe the only real version of it that exists.</p>
+            <p>Here's what makes Monero different:</p>
+            <ul>
+              <li>Privacy by default: Every transaction is hidden using ring signatures, stealth addresses, and confidential amounts.</li>
+              <li>Fungibility: All coins are equal. No "tainted" coins, no blacklisting.</li>
+              <li>Scalable and usable: It's fast, cheap, and accessible to mine with a normal CPU.</li>
+              <li><strong>Tail emission:</strong> Unlike Bitcoin, Monero emits a small, steady amount (0.6 XMR per block) indefinitely. Although this means slight inflation, it's at a very low and predictable rate that prevents harmful inflation while ensuring miners stay incentivized and coins keep circulating.</li>
+            </ul>
+          </div>
+
+          <div class="blog-section">
+            <h3>Why Monero Will Likely Never Go Mainstream</h3>
+            <div class="image-container">
+              <img src="images/goverment.jpg" alt="Monero Regulation Challenges" class="blog-image">
+            </div>
+            <p>Monero is too good at what it does — it gives you actual financial privacy.</p>
+            <p>Governments and institutions, who rely on transparency and control to enforce regulations, don't like that. Monero has already been banned or delisted from several exchanges, even though it has no history of scams or centralization.</p>
+            <p>Without the coorporation from government nothing can go mainstream.</p>
+          </div>
+
+          <div class="blog-section">
+            <h3>Everything Else Is Just a Tech Startup in Disguise</h3>
+            <div class="image-container">
+              <img src="images/shit.jpg" alt="Crypto Startups" class="blog-image">
+            </div>
+            <p>Let's be honest: most other coins are nonsense.</p>
+            <ul>
+              <li>Ethereum? Centralized under Proof-of-Stake, where the rich get richer and protocol changes are made by insiders.</li>
+              <li>Altcoins? Often premined, VC-funded, or forked clones with no real innovation.</li>
+              <li>Even coins that claim to be private or fast usually rely on trusted third parties, bridges, or custodians — which defeats the purpose of decentralization.</li>
+            </ul>
+          </div>
+
+          <div class="blog-section">
+            <h3>Final Thoughts: Ask the Bigger Questions</h3>
+            <p>Bitcoin and Monero aren't perfect. But they ask better questions than the rest:</p>
+            <ul>
+              <li>Should money be spendable or storeable?</li>
+              <li>Should financial privacy be a right or a threat?</li>
+              <li>Can we build systems that don't require permission, trust, or surveillance?</li>
+            </ul>
+            <p>These are big ideas, and you don't need to agree with me. But if you're even mildly interested in what crypto was supposed to be, you owe it to yourself to look into Bitcoin and Monero. Read, question, dig.</p>
+            <p>Because the future of money isn't just about tech — it's about who gets to control it.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <script>
+    function togglePost(header) {
+      const content = header.nextElementSibling;
+      const icon = header.querySelector('.toggle-icon');
+      
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+        icon.textContent = '+';
+        header.classList.remove('active');
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        icon.textContent = '−';
+        header.classList.add('active');
+      }
+    }
+
+    function toggleDisclaimer(disclaimer) {
+      const blogPosts = document.querySelector('.blog-posts');
+      const icon = disclaimer.querySelector('.disclaimer-icon');
+      
+      if (disclaimer.classList.contains('active')) {
+        // If active, close everything
+        blogPosts.style.display = 'none';
+        icon.textContent = '+';
+        disclaimer.classList.remove('active');
+        // Reset all blog post states
+        document.querySelectorAll('.blog-content').forEach(content => {
+          content.style.maxHeight = null;
+        });
+        document.querySelectorAll('.blog-header').forEach(header => {
+          header.classList.remove('active');
+          header.querySelector('.toggle-icon').textContent = '+';
+        });
+      } else {
+        // If not active, show blog posts
+        blogPosts.style.display = 'block';
+        icon.textContent = '−';
+        disclaimer.classList.add('active');
+      }
+    }
+
+    // Initialize everything as closed when page loads
+    document.addEventListener('DOMContentLoaded', () => {
+      const blogPosts = document.querySelector('.blog-posts');
+      
+      blogPosts.style.display = 'none';
+      
+      // Reset all blog post states
+      document.querySelectorAll('.blog-content').forEach(content => {
+        content.style.maxHeight = null;
+      });
+      document.querySelectorAll('.blog-header').forEach(header => {
+        header.classList.remove('active');
+        header.querySelector('.toggle-icon').textContent = '+';
+      });
+    });
+
+    // Typing effect for title
+    function typeEffect(element, text, speed = 100) {
+      let i = 0;
+      element.textContent = '';
+      
+      function type() {
+        if (i < text.length) {
+          element.textContent += text.charAt(i);
+          i++;
+          setTimeout(type, speed);
+        }
+      }
+      
+      type();
+    }
+
+    // Initialize typing effect
+    document.addEventListener('DOMContentLoaded', () => {
+      const title = document.querySelector('.typing-text');
+      typeEffect(title, 'Blog');
+    });
+  </script>
+</body>
+</html> 
