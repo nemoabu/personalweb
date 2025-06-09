@@ -316,18 +316,6 @@ h1 {
   padding-right: 30px;
 }
 
-.ai-note {
-  margin-top: 15px !important;
-  padding: 12px !important;
-  background-color: rgba(179, 106, 255, 0.1) !important;
-  border-radius: 6px !important;
-  border-left: 3px solid #b36aff !important;
-}
-
-.ai-note strong {
-  color: #b36aff;
-}
-
 .disclaimer-icon {
   position: absolute;
   right: 20px;
