@@ -25,6 +25,7 @@
 
     <div class="blog-disclaimer" onclick="toggleDisclaimer(this)">
       <p>Click to view my blog posts. Here, I share my thoughts on technology, business, and society. These are personal opinions and deep dives into complex topics. I aim to be direct and honest in my analysis, which might sometimes challenge conventional views. Feel free to disagree — that's what makes these discussions valuable.</p>
+      <p class="ai-note">• <strong>AI-Assisted Organization:</strong> These posts have been structured and refined with AI assistance to ensure clarity and coherence in presenting complex ideas.</p>
       <span class="disclaimer-icon">+</span>
     </div>
     
@@ -202,5 +203,21 @@
       typeEffect(title, 'Blog');
     });
   </script>
+
+  <style>
+    .ai-note {
+      background: rgba(147, 51, 234, 0.1);
+      border-left: 4px solid rgb(147, 51, 234);
+      padding: 12px 15px;
+      margin: 15px 0;
+      font-size: 0.95em;
+      color: rgb(88, 28, 135);
+      border-radius: 0 4px 4px 0;
+    }
+
+    .ai-note strong {
+      color: rgb(126, 34, 206);
+    }
+  </style>
 </body>
 </html> 
