@@ -29,11 +29,6 @@
       <span class="disclaimer-icon">+</span>
     </div>
 
-    <div class="viewer-disclaimer" style="display: none;">
-      <p>Viewer Disclaimer: This blog contains personal opinions and analysis that may challenge conventional views. By proceeding, you acknowledge that you are reading these posts with an open mind and understand that these are individual perspectives, not financial or legal advice.</p>
-      <button class="viewer-button" onclick="acceptDisclaimer(this)">I Understand and Wish to Proceed</button>
-    </div>
-    
     <div class="blog-posts" style="display: none;">
       <article class="blog-post">
         <div class="blog-header" onclick="togglePost(this)">
@@ -97,7 +92,7 @@
             </div>
             <p>Monero is too good at what it does — it gives you actual financial privacy.</p>
             <p>Governments and institutions, who rely on transparency and control to enforce regulations, don't like that. Monero has already been banned or delisted from several exchanges, even though it has no history of scams or centralization.</p>
-            <p>Without the coorporation from government nothing can go mainstream.</p>
+            <p>Without the cooperation from government nothing can go mainstream.</p>
           </div>
 
           <div class="blog-section">
@@ -126,59 +121,6 @@
           </div>
         </div>
       </article>
-
-      <article class="blog-post">
-        <div class="blog-header" onclick="togglePost(this)">
-          <h2>Why Starting a Business in Canada Is So Hard</h2>
-          <span class="toggle-icon">+</span>
-        </div>
-        <div class="blog-content">
-          <div class="blog-intro">
-            <p>Canada likes to portray itself as a land of opportunity for entrepreneurs. But if you're trying to actually start and grow a small business here, you quickly discover it's far from simple. The reality? Government regulations, entrenched monopolies, and uneven funding create a system that favors big players and nonprofits — leaving many small businesses struggling to survive.</p>
-          </div>
-
-          <div class="blog-section">
-            <h3>Red Tape and Regulation</h3>
-            <p>Opening a business in Canada means navigating an overwhelming maze of permits, licenses, zoning laws, and tax regulations. Compliance isn't optional — it's costly and time-consuming. Small business owners often spend more time on paperwork than on growing their company.</p>
-          </div>
-
-          <div class="blog-section">
-            <h3>Monopolies That Control the Market</h3>
-            <div class="image-container">
-              <img src="images/telecom.jpeg" alt="Canadian Market Monopolies" class="blog-image">
-            </div>
-            <p>Canada's largest industries are dominated by a handful of powerful corporations:</p>
-            <ul>
-              <li><strong>Banking:</strong> The Big Five banks — RBC, TD, Scotiabank, BMO, and CIBC — control the entire financial sector. Starting a new bank or even a fintech platform faces near-impossible regulatory barriers.</li>
-              <li><strong>Grocery:</strong> Loblaws, Sobeys (Empire), and Metro together control over 80% of grocery retail. New products and smaller companies face huge listing and slotting fees — sometimes tens of thousands of dollars just to get shelf space.</li>
-              <li><strong>Telecom:</strong> Bell, Rogers, and Telus dominate internet and phone services. New entrants must lease infrastructure from these giants at inflated prices, keeping costs high for everyone.</li>
-            </ul>
-          </div>
-
-          <div class="blog-section">
-            <h3>Fees and Costs for Small Businesses</h3>
-            <p>Even if you're a small local business, the expenses add up quickly:</p>
-            <ul>
-              <li>Business licenses often cost hundreds of dollars annually.</li>
-              <li>Credit card processing fees can be around 2.4% per transaction.</li>
-              <li>Payroll taxes, WSIB premiums, and HST filings require time, money, and expertise.</li>
-              <li>Rent, utilities, and insurance keep rising — with little protection from large competitors moving in nearby.</li>
-            </ul>
-          </div>
-
-          <div class="blog-section">
-            <h3>Unequal Access to Funding</h3>
-            <p>Small businesses generally have limited access to grants or funding. Many programs are targeted only at very small companies or tied to competitive pitch contests that don't support long-term stability.</p>
-            <p>Meanwhile, nonprofits benefit from significant government support, including multi-year grants, tax exemptions, and other advantages. This helps explain why Canada has an exceptionally high number of nonprofits compared to traditional small businesses. Don't get me wrong — I'm not against nonprofits. It's just fascinating how they receive such preferential treatment in what's supposed to be a capitalist economy. This kind of favoritism, while well-intentioned, might actually be holding back our GDP growth by not encouraging more traditional business development.</p>
-          </div>
-
-          <div class="blog-section">
-            <h3>The Bottom Line</h3>
-            <p>Canada's business environment is not designed for the average entrepreneur to thrive. It protects entrenched monopolies, heavily regulates newcomers, and channels much of the available support to nonprofits rather than true small businesses.</p>
-            <p>Entrepreneurship is possible here — but success often requires deep pockets, strong connections, and resilience to bureaucracy and competition.</p>
-          </div>
-        </div>
-      </article>
     </div>
   </main>
 
@@ -199,20 +141,15 @@
     }
 
     function toggleDisclaimer(disclaimer) {
-      const viewerDisclaimer = document.querySelector('.viewer-disclaimer');
       const blogPosts = document.querySelector('.blog-posts');
       const icon = disclaimer.querySelector('.disclaimer-icon');
-      const acceptButton = document.querySelector('.viewer-button');
-      
+
       if (disclaimer.classList.contains('active')) {
-        // If active, close everything
-        viewerDisclaimer.style.display = 'none';
         blogPosts.style.display = 'none';
         icon.textContent = '+';
         disclaimer.classList.remove('active');
-        // Reset the accept button state
-        acceptButton.classList.remove('accepted');
-        // Reset all blog post states
+
+        // Reset blog post state
         document.querySelectorAll('.blog-content').forEach(content => {
           content.style.maxHeight = null;
         });
@@ -221,34 +158,32 @@
           header.querySelector('.toggle-icon').textContent = '+';
         });
       } else {
-        // If not active, show viewer disclaimer
-        viewerDisclaimer.style.display = 'block';
-        blogPosts.style.display = 'none'; // Ensure blog posts are hidden
+        blogPosts.style.display = 'block';
         icon.textContent = '−';
         disclaimer.classList.add('active');
       }
     }
 
-    function acceptDisclaimer(button) {
-      const blogPosts = document.querySelector('.blog-posts');
-      const viewerDisclaimer = document.querySelector('.viewer-disclaimer');
-      
-      blogPosts.style.display = 'block';
-      viewerDisclaimer.style.display = 'none';
-      button.classList.add('accepted');
+    // Typing effect
+    function typeEffect(element, text, speed = 100) {
+      let i = 0;
+      element.textContent = '';
+      function type() {
+        if (i < text.length) {
+          element.textContent += text.charAt(i);
+          i++;
+          setTimeout(type, speed);
+        }
+      }
+      type();
     }
 
-    // Initialize everything as closed when page loads
     document.addEventListener('DOMContentLoaded', () => {
-      const viewerDisclaimer = document.querySelector('.viewer-disclaimer');
-      const blogPosts = document.querySelector('.blog-posts');
-      const acceptButton = document.querySelector('.viewer-button');
-      
-      viewerDisclaimer.style.display = 'none';
-      blogPosts.style.display = 'none';
-      acceptButton.classList.remove('accepted');
-      
-      // Reset all blog post states
+      const title = document.querySelector('.typing-text');
+      typeEffect(title, 'Blog');
+
+      // Reset on load
+      document.querySelector('.blog-posts').style.display = 'none';
       document.querySelectorAll('.blog-content').forEach(content => {
         content.style.maxHeight = null;
       });
@@ -257,28 +192,6 @@
         header.querySelector('.toggle-icon').textContent = '+';
       });
     });
-
-    // Typing effect for title
-    function typeEffect(element, text, speed = 100) {
-      let i = 0;
-      element.textContent = '';
-      
-      function type() {
-        if (i < text.length) {
-          element.textContent += text.charAt(i);
-          i++;
-          setTimeout(type, speed);
-        }
-      }
-      
-      type();
-    }
-
-    // Initialize typing effect
-    document.addEventListener('DOMContentLoaded', () => {
-      const title = document.querySelector('.typing-text');
-      typeEffect(title, 'Blog');
-    });
   </script>
 </body>
-</html> 
+</html>
