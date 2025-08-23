@@ -56,6 +56,48 @@ nav a:hover {
   font-weight: bold;
   font-size: 18px;
   color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-text {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  z-index: 1;
+  position: relative;
+}
+
+.logo:hover .logo-text {
+  opacity: 1;
+  color: #b36aff;
+  transform: translateX(2px);
+}
+
+.logo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(179, 106, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.logo:hover::before {
+  left: 100%;
+}
+
+.logo:hover {
+  background-color: rgba(179, 106, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(179, 106, 255, 0.2);
 }
 
 .triangle {
@@ -64,15 +106,44 @@ nav a:hover {
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-bottom: 18px solid #b36aff;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .logo:hover .triangle {
   animation: spin 1.2s linear infinite;
+  filter: drop-shadow(0 0 8px rgba(179, 106, 255, 0.6));
+  transform: scale(1.1);
 }
 
 @keyframes spin {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    box-shadow: 0 0 0 0 rgba(179, 106, 255, 0.4);
+  }
+  50% { 
+    box-shadow: 0 0 0 8px rgba(179, 106, 255, 0);
+  }
+}
+
+.logo {
+  animation: pulse 2s infinite;
+}
+
+/* Mobile responsive - hide home text on small screens */
+@media (max-width: 768px) {
+  .logo-text {
+    display: none;
+  }
+  
+  .logo {
+    padding: 8px;
+  }
 }
 
 /* Main content layout */

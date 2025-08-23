@@ -11,6 +11,7 @@
   <header>
     <a href="/" class="logo">
       <div class="triangle"></div>
+      <span class="logo-text">Home</span>
     </a>
     <nav>
       <a href="../about/">About</a>
@@ -30,6 +31,95 @@
     </div>
     
     <div class="blog-posts" style="display: none;">
+      <article class="blog-post">
+        <div class="blog-header" onclick="togglePost(this)">
+          <h2>The Hidden Computers Inside Your Computer and Why Privacy Is at Risk</h2>
+          <span class="toggle-icon">+</span>
+        </div>
+        <div class="blog-content">
+          <div class="blog-intro">
+            <p>Most people think installing Linux, using a VPN, or holding Monero makes them safe online. The reality is more complicated. Modern CPUs from Intel and AMD come with <strong>secret microcontrollers</strong> that operate outside your control, and very few people even know they exist.</p>
+            <p>This has major implications for privacy, surveillance, and cryptocurrency security.</p>
+          </div>
+
+          <div class="blog-section">
+            <h3>1. The "Secret Computers" in Your CPU</h3>
+            <div class="image-container">
+              <img src="images/thinker.jpg" alt="Hidden Computer Components" class="blog-image">
+            </div>
+            <p>Inside almost every modern processor, there is a <strong>separate microcomputer</strong> that runs independently from your operating system:</p>
+            <ul>
+              <li><strong>Intel Management Engine (ME)</strong> - A small subsystem inside Intel CPUs since 2008. It has deep access to memory, storage, and network interfaces, even when your computer is off but still plugged in.</li>
+              <li><strong>AMD Platform Security Processor (PSP)</strong> - AMD's equivalent. It handles "security tasks" like firmware signing and encryption but remains closed-source, which means no one outside AMD knows what it truly does.</li>
+            </ul>
+            <p>These hidden components run <strong>below Linux, Windows, or macOS</strong>. Even if you encrypt your drive, format your disk, or boot a privacy-focused OS, ME or PSP will still operate in the background.</p>
+          </div>
+
+          <div class="blog-section">
+            <h3>2. Why Privacy Advocates Are Concerned</h3>
+            <div class="image-container">
+              <img src="images/telecom.jpeg" alt="Privacy and Surveillance Concerns" class="blog-image">
+            </div>
+            <p>Because these systems are closed-source, no one can independently verify what they are doing. Researchers have discovered vulnerabilities in Intel ME before, proving that these subsystems can be exploited. The concern is that they could potentially:</p>
+            <ul>
+              <li>Access files and encryption keys stored in memory</li>
+              <li>Monitor network activity without your knowledge</li>
+              <li>Communicate silently, bypassing firewalls and security software</li>
+            </ul>
+            <p>If you do not control the firmware, you cannot fully control your device.</p>
+          </div>
+
+          <div class="blog-section">
+            <h3>3. Government Surveillance and Palantir</h3>
+            <div class="image-container">
+              <img src="images/goverment.jpg" alt="Government Surveillance" class="blog-image">
+            </div>
+            <p>Palantir, a company known for large-scale data collection, works closely with governments and law enforcement agencies worldwide. They aggregate information from multiple sources to build detailed profiles of individuals.</p>
+            <p>If your CPU silently leaks unique identifiers or telemetry through ME or PSP, this information can be combined with other metadata that Palantir and similar organizations already collect. Even if you use Linux, Tor, or Monero, you may still be trackable.</p>
+          </div>
+
+          <div class="blog-section">
+            <h3>4. Special Hardware for Government Officials</h3>
+            <p>Here is the shocking part. There have been verified reports that certain high-level government agencies, including the NSA, receive hardware with <strong>Intel ME disabled</strong> through a special configuration called <strong>High Assurance Platform (HAP)</strong>. Intel created this mode specifically at the request of the U.S. government.</p>
+            <p>In other words, regular consumers get CPUs with always-on, closed-source microcontrollers, while certain government officials get versions without them. This shows that the capability to remove or disable ME exists but is intentionally restricted.</p>
+          </div>
+
+          <div class="blog-section">
+            <h3>5. How This Impacts Cryptocurrency Security</h3>
+            <div class="image-container">
+              <img src="images/monero.jpg" alt="Cryptocurrency Security" class="blog-image">
+            </div>
+            <p>If you hold crypto like Bitcoin or Monero, these hidden systems can create additional risks:</p>
+            <ul>
+              <li><strong>Private keys</strong> are loaded into memory when you unlock your wallet. ME or PSP could theoretically capture them.</li>
+              <li><strong>Hardware fingerprints</strong> can link your wallet activity to your real-world identity.</li>
+              <li>Agencies like the IRS and Europol already use companies like Palantir to deanonymize crypto transactions by combining blockchain analysis with metadata from devices.</li>
+            </ul>
+            <p>If you are using a regular laptop or desktop for crypto storage, your hardware may be part of your threat model without you realizing it.</p>
+          </div>
+
+          <div class="blog-section">
+            <h3>6. Why Linux Alone Does Not Solve the Problem</h3>
+            <p>Linux protects you at the software level, but Intel ME and AMD PSP operate <strong>below the kernel</strong>. This means:</p>
+            <ul>
+              <li>Full-disk encryption can be bypassed</li>
+              <li>Firewalls and VPNs do not matter if data leaks at the hardware level</li>
+              <li>Even hardened Linux distributions like Tails or Qubes cannot fully protect you unless ME or PSP are disabled</li>
+            </ul>
+            <p>Linux improves your privacy, but it does not make you immune.</p>
+          </div>
+
+          <div class="blog-section">
+            <h3>7. The Takeaway</h3>
+            <div class="image-container">
+              <img src="images/scrudge.jpg" alt="Privacy Awareness" class="blog-image">
+            </div>
+            <p>Modern CPUs from Intel and AMD include hidden subsystems that we cannot fully control. While many concerns around Intel ME and AMD PSP remain <strong>theoretical</strong>, it is important to understand that these components operate at a level below your operating system.</p>
+            <p>Even if you are using open-source software like Linux, you are not completely immune. The best thing you can do is <strong>stay informed</strong> about these technologies and how they affect privacy, security, and cryptocurrency. Awareness is the first step toward making better decisions in this space.</p>
+          </div>
+        </div>
+      </article>
+
       <article class="blog-post">
         <div class="blog-header" onclick="togglePost(this)">
           <h2>Rethinking Crypto: Why Bitcoin and Monero Might Be the Only Coins That Matter</h2>
