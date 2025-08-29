@@ -1,33 +1,20 @@
-// Wait until the DOM is fully loaded
+// Simple JavaScript for projects page
 document.addEventListener("DOMContentLoaded", function() {
-    // Get the modal
-    var modal = document.getElementById("myModal");
-  
-    // Get the image and insert it inside the modal
-    var images = document.querySelectorAll(".preview-imgs img");
-    var modalImg = document.getElementById("img01");
-  
-    // Loop through all images and add event listeners
-    images.forEach(function(image) {
-      image.onclick = function() {
-        modal.style.display = "block";
-        modalImg.src = this.src;
-      }
+    console.log("Projects page loaded successfully");
+    
+    // Add smooth scroll behavior
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    // Simple hover effects for tech tags
+    const techTags = document.querySelectorAll('.tech-tag');
+    techTags.forEach(tag => {
+        tag.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px) scale(1.05)';
+        });
+        
+        tag.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
     });
-  
-    // Get the <span> element to close the modal
-    var span = document.getElementsByClassName("close")[0];
-  
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-  
-    // When the user clicks anywhere outside the image, close the modal
-    modal.onclick = function(event) {
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    }
-  });
+});
   
