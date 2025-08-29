@@ -7,19 +7,6 @@
   <link rel="stylesheet" href="project.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="icon" href="../fav.png" type="image/png">
-  <style>
-    .tech {
-      font-weight: bold;
-      color: #c8a2ff;
-      transition: color 0.3s ease;
-    }
-
-    .tech:hover {
-      color: #b266ff;
-      cursor: pointer;
-      text-decoration: underline;
-    }
-  </style>
 </head>
 <body>
 
@@ -37,92 +24,170 @@
   </header>
 
   <main>
-    <!-- Project 0 -->
-    <h2 class="project-title">muscl3</h2>
-    <section class="project">
-      <div class="preview-row">
-        <div class="preview-text">
+    <!-- Selected Work Section -->
+    <section class="section-header">
+      <h1>Selected Work</h1>
+      <p>Featured projects that showcase my best work</p>
+    </section>
+
+    <div class="selected-work">
+      <!-- muscl3 Project -->
+      <article class="project-card featured">
+        <div class="project-image">
+          <img src="images/muscl3.1.png" alt="muscl3 Screenshot">
+          <div class="project-overlay">
+            <div class="project-links">
+              <a href="https://muscl3.com" target="_blank" class="btn-primary">
+                <i class="fas fa-external-link-alt"></i> Visit Site
+              </a>
+              <a href="https://youtu.be/l0fJk6AuBhs" target="_blank" class="btn-secondary">
+                <i class="fa-brands fa-youtube"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project-content">
+          <h2>muscl3</h2>
           <h3>3D Interactive Muscle Explorer</h3>
-          <p>A 3D muscle anatomy explorer built using <span class="tech">React</span>, <span class="tech">Vite</span>, and <span class="tech">Supabase</span>. Users can interact with a human model to learn about muscles and view targeted exercise videos pulled from YouTube. Built for intuitive and educational gym discovery.</p>
+          <p>A 3D muscle anatomy explorer built using React, Vite, and Supabase. Users can interact with a human model to learn about muscles and view targeted exercise videos pulled from YouTube. Built for intuitive and educational gym discovery.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Vite</span>
+            <span class="tech-tag">Supabase</span>
+            <span class="tech-tag">3D Graphics</span>
+          </div>
+          <div class="impact-link">
+            <a href="reviews/muscl3-review.pdf" target="_blank">
+              <i class="fas fa-chart-line"></i> View Impact
+            </a>
+          </div>
         </div>
-        <div class="preview-imgs">
-          <img src="images/muscl3.1.png" alt="muscl3 Screenshot 1">
-          <img src="images/muscl3.2.png" alt="muscl3 Screenshot 2">
-          <img src="images/muscl3.3.png" alt="muscl3 Screenshot 3">
+      </article>
+
+      <!-- Linux Server Project -->
+      <article class="project-card featured">
+        <div class="project-image">
+          <img src="images/linux-server.jpg" alt="Linux Server Setup" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjMTExIi8+CjxwYXRoIGQ9Ik0xMDAgMTAwSDEwMFYyMDBIMTAwIiBzdHJva2U9IiM4YzVhYzgiIHN0cm9rZS13aWR0aD0iMyIvPgo8cGF0aCBkPSJNMTUwIDEwMEgxNTBWMjAwSDE1MCIgc3Ryb2tlPSIjOGM1YWM4IiBzdHJva2Utd2lkdGg9IjMiLz4KPHBhdGggZD0iTTIwMCAxMDBIMjAwVjIwMEgyMDAiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlPSIjOGM1YWM4Ii8+CjxwYXRoIGQ9Ik0yNTAgMTAwSDI1MFYyMDBIMjUwIiBzdHJva2U9IiM4YzVhYzgiIHN0cm9rZS13aWR0aD0iMyIvPgo8cGF0aCBkPSJNMzAwIDEwMEgzMDBWMjAwSDMwMCIgc3Ryb2tlPSIjOGM1YWM4IiBzdHJva2Utd2lkdGg9IjMiLz4KPHN2ZyB4PSIxMjAiIHk9IjEyMCIgd2lkdGg9IjE2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDE2MCA2MCIgZmlsbD0ibm9uZSI+CjxyZWN0IHdpZHRoPSIxNjAiIGhlaWdodD0iNjAiIHJ4PSI4IiBmaWxsPSIjMDAwIiBzdHJva2U9IiM4YzVhYzgiIHN0cm9rZS13aWR0aD0iMiIvPgo8dGV4dCB4PSI4MCIgeT0iMzUiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM4YzVhYzgiPmxpbnV4LXNlcnZlcjwvdGV4dD4KPC9zdmc+Cg=='">
+          <div class="project-overlay">
+            <div class="project-links">
+              <a href="#" class="btn-primary">
+                <i class="fas fa-server"></i> Server Info
+              </a>
+              <a href="#" class="btn-secondary">
+                <i class="fab fa-github"></i> Setup Guide
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-      <a href="https://muscl3.com" target="_blank">Visit Website</a>
-      <a href="https://youtu.be/l0fJk6AuBhs" target="_blank">
-        <i class="fa-brands fa-youtube"></i> Demo
-      </a>
+        <div class="project-content">
+          <h2>Linux Server</h2>
+          <h3>Personal Development Server</h3>
+          <p>A self-hosted Linux server running on my old laptop, providing file hosting, Git services, and development tools. Features automated backups, SSL certificates, and a custom dashboard for monitoring system resources and services.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Linux</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">Nginx</span>
+            <span class="tech-tag">Git</span>
+            <span class="tech-tag">SSL</span>
+          </div>
+          <div class="impact-link">
+            <a href="reviews/linux-server-review.pdf" target="_blank">
+              <i class="fas fa-chart-line"></i> View Impact
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- All Work Section -->
+    <section class="section-header">
+      <h1>All Work</h1>
+      <p>Complete portfolio of projects and experiments</p>
     </section>
 
-    <!-- Project 1 -->
-    <h2 class="project-title">Food Nimbus</h2>
-    <section class="project">
-      <div class="preview-row">
-        <div class="preview-text">
-          <h3>Mobile App</h3>
-          <p>A mobile app mockup created in <span class="tech">Figma</span>, designed to assist individuals with allergies by providing personalized meal recommendations and fostering connections through shared meal experiences.</p>
+    <div class="all-work">
+      <!-- Food Nimbus -->
+      <article class="project-card">
+        <div class="project-image">
+          <img src="images/figma1.png" alt="Food Nimbus">
+          <div class="project-overlay">
+            <div class="project-links">
+              <a href="https://www.figma.com/design/j3I1v4GEAozbLJUiyEubci/PDS?node-id=0-1&p=f" target="_blank" class="btn-primary">
+                <i class="fab fa-figma"></i> View Design
+              </a>
+              <a href="https://youtu.be/sveRVhTEok0" target="_blank" class="btn-secondary">
+                <i class="fa-brands fa-youtube"></i> Demo
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="preview-imgs">
-          <img src="images/figma1.png" alt="Preview 1">
-          <img src="images/figma2.png" alt="Preview 2">
-          <img src="images/figma3.png" alt="Preview 3">
+        <div class="project-content">
+          <h2>Food Nimbus</h2>
+          <h3>Mobile App Design</h3>
+          <p>A mobile app mockup created in Figma, designed to assist individuals with allergies by providing personalized meal recommendations and fostering connections through shared meal experiences.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Figma</span>
+            <span class="tech-tag">UI/UX</span>
+            <span class="tech-tag">Mobile Design</span>
+          </div>
         </div>
-      </div>
-      <a href="https://www.figma.com/design/j3I1v4GEAozbLJUiyEubci/PDS?node-id=0-1&p=f" target="_blank">View on Figma</a>
-      <a href="https://youtu.be/sveRVhTEok0" target="_blank">
-        <i class="fa-brands fa-youtube"></i> Demo
-      </a>
-    </section>
+      </article>
 
-    <!-- Project 2 -->
-    <h2 class="project-title">SmartCart</h2>
-    <section class="project">
-      <div class="preview-row">
-        <div class="preview-text">
-          <h3>SmartCart</h3>
-          <p>Addressing the challenges of grocery checkout in the digital world by focusing on accessibility features. Built using <span class="tech">React</span> and <span class="tech">TypeScript</span>, resulting in a 3rd place finish in the hackathon.</p>
+      <!-- SmartCart -->
+      <article class="project-card">
+        <div class="project-image">
+          <img src="images/smartcart1.png" alt="SmartCart">
+          <div class="project-overlay">
+            <div class="project-links">
+              <a href="https://github.com/twang849/Overhaul" target="_blank" class="btn-primary">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://youtu.be/Al6SOtpHx3o" target="_blank" class="btn-secondary">
+                <i class="fa-brands fa-youtube"></i> Demo
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="preview-imgs">
-          <img src="images/smartcart1.png" alt="SmartCart 1">
-          <img src="images/group5.jpg" alt="SmartCart 2">
-          <img src="images/smartcart3.png" alt="SmartCart 3">
+        <div class="project-content">
+          <h2>SmartCart</h2>
+          <h3>Accessible Grocery Checkout</h3>
+          <p>Addressing the challenges of grocery checkout in the digital world by focusing on accessibility features. Built using React and TypeScript, resulting in a 3rd place finish in the hackathon.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">Accessibility</span>
+          </div>
         </div>
-      </div>
-      <a href="https://github.com/twang849/Overhaul" target="_blank">View on GitHub</a>
-      <a href="https://youtu.be/Al6SOtpHx3o" target="_blank">
-        <i class="fa-brands fa-youtube"></i> Demo
-      </a>
-    </section>
+      </article>
 
-    <!-- Project 3 -->
-    <h2 class="project-title">Virtual Pet</h2>
-    <section class="project">
-      <div class="preview-row">
-        <div class="preview-text">
-          <h3>Virtual Pet</h3>
-          <p>Tamagotchi-style pet simulator built with <span class="tech">Maven</span> and <span class="tech">JavaFX</span> as part of a group project final for a software engineering class, achieving a 98% grade and successfully meeting all project requirements.</p>
+      <!-- Virtual Pet -->
+      <article class="project-card">
+        <div class="project-image">
+          <img src="images/pet1.png" alt="Virtual Pet">
+          <div class="project-overlay">
+            <div class="project-links">
+              <a href="https://github.com/nemoabu/pet-game" target="_blank" class="btn-primary">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://youtu.be/E9WgXN-Uq2o" target="_blank" class="btn-secondary">
+                <i class="fa-brands fa-youtube"></i> Demo
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="preview-imgs">
-          <img src="images/pet1.png" alt="Virtual 1">
-          <img src="images/pet2.png" alt="Virtual 2">
-          <img src="images/pet3.png" alt="Virtual 3">
+        <div class="project-content">
+          <h2>Virtual Pet</h2>
+          <h3>Tamagotchi-Style Simulator</h3>
+          <p>Tamagotchi-style pet simulator built with Maven and JavaFX as part of a group project final for a software engineering class, achieving a 98% grade and successfully meeting all project requirements.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">JavaFX</span>
+            <span class="tech-tag">Maven</span>
+          </div>
         </div>
-      </div>
-      <a href="https://github.com/nemoabu/pet-game" target="_blank">View on GitHub</a>
-      <a href="https://youtu.be/E9WgXN-Uq2o" target="_blank">
-        <i class="fa-brands fa-youtube"></i> Demo
-      </a>
-    </section>
+      </article>
+    </div>
   </main>
-
-  <!-- Modal structure -->
-  <div id="myModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="img01">
-  </div>
 
   <script src="project.js"></script>
 </body>
