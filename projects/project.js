@@ -21,9 +21,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const studyModal = document.getElementById('studyModal');
     const serverModal = document.getElementById('serverModal');
     const setupModal = document.getElementById('setupModal');
+    const doomsdayModal = document.getElementById('doomsdayModal');
     const closeStudyBtn = document.getElementById('closeModal');
     const closeServerBtn = document.getElementById('closeServerModal');
     const closeSetupBtn = document.getElementById('closeSetupModal');
+    const closeDoomsdayBtn = document.getElementById('closeDoomsdayModal');
     const impactLinks = document.querySelectorAll('.view-impact-btn');
     const serverInfoBtn = document.querySelector('.btn-primary i.fas.fa-server').parentElement;
 
@@ -65,6 +67,10 @@ document.addEventListener("DOMContentLoaded", function() {
             serverModal.style.display = 'none';
             document.body.style.overflow = 'auto';
         }
+        if (e.target === doomsdayModal) {
+            doomsdayModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
     });
 
     // Server Info button click handler
@@ -74,9 +80,25 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.style.overflow = 'hidden';
     });
 
+    // Doomsday Documentation button click handler
+    const doomsdayBtn = document.querySelector('.view-doomsday-btn');
+    if (doomsdayBtn) {
+        doomsdayBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            doomsdayModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
     // Close setup modal
     closeSetupBtn.addEventListener('click', function() {
         setupModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+
+    // Close doomsday modal
+    closeDoomsdayBtn.addEventListener('click', function() {
+        doomsdayModal.style.display = 'none';
         document.body.style.overflow = 'auto';
     });
 
@@ -93,6 +115,10 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             if (setupModal.style.display === 'block') {
                 setupModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+            if (doomsdayModal.style.display === 'block') {
+                doomsdayModal.style.display = 'none';
                 document.body.style.overflow = 'auto';
             }
         }

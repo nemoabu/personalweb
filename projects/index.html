@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects — Abdullokh</title>
   <link rel="stylesheet" href="project.css" />
+  <link rel="stylesheet" href="doomsday.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="icon" href="../fav.png" type="image/png">
 </head>
@@ -78,8 +79,8 @@
         </div>
         <div class="project-content">
           <h2>Linux Server</h2>
-          <h3>Personal Development Server</h3>
-          <p>A self-hosted Linux server running on my old laptop, providing file hosting, Git services, and development tools. Features automated backups, SSL certificates, and a custom dashboard for monitoring system resources and services.</p>
+          <h3>Sustainable Home Infrastructure</h3>
+          <p>A self-hosted server that repurposes an old laptop into a private cloud using Tailscale's mesh network. Provides file storage, VPN, and Git services while promoting sustainability through reduced e-waste and power consumption.</p>
           <div class="tech-stack">
             <span class="tech-tag">Linux</span>
             <span class="tech-tag">Tailscale</span>
@@ -103,6 +104,94 @@
     </section>
 
     <div class="all-work">
+      <!-- Virtual Pet -->
+      <article class="project-card">
+        <div class="project-image">
+          <img src="images/pet1.png" alt="Virtual Pet">
+          <div class="project-overlay">
+            <div class="project-links">
+              <a href="https://github.com/nemoabu/virtual-pet" target="_blank" class="btn-primary">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://youtu.be/eOgFAA-hFuA" target="_blank" class="btn-secondary">
+                <i class="fa-brands fa-youtube"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project-content">
+          <h2>Virtual Pet</h2>
+          <h3>Tamagotchi-style Game</h3>
+          <p>A virtual pet game built with Java and Java. Features multiple pet types, dynamic aging, hunger and happiness systems, and persistent save states. Demonstrates object-oriented design and game development fundamentals.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">JavaFX</span>
+            <span class="tech-tag">Meaven</span>
+            <span class="tech-tag">OOP</span>
+            <span class="tech-tag">Game Dev</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Doomsday Laptop -->
+      <article class="project-card">
+        <div class="project-image">
+          <img src="images/archlinux4.jpg" alt="Doomsday Laptop">
+          <div class="project-overlay">
+            <div class="project-links">
+              <a href="#" id="doomsdayDocsBtn" class="btn-primary">
+                <i class="fas fa-book"></i> Documentation
+              </a>
+              <a href="https://youtu.be/b-yZS83Rfck" target="_blank" class="btn-secondary">
+                <i class="fa-brands fa-youtube"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project-content">
+          <h2>Doomsday Laptop</h2>
+          <h3>Offline Knowledge Base</h3>
+          <p>A fully open-source Pop!_OS laptop configured for offline resilience. Features Kiwix for offline Wikipedia access, survival guides, and self-hosted essential services. A digital survival kit for uncertain times.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Pop!_OS</span>
+            <span class="tech-tag">Kiwix</span>
+            <span class="tech-tag">Self-hosted</span>
+            <span class="tech-tag">LLMs</span>
+            <span class="tech-tag">VMs</span>
+            <span class="tech-tag">Tails_OS</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Portfolio Website -->
+      <article class="project-card">
+        <div class="project-image">
+          <img src="images/portfolio.png" alt="Portfolio Website" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjMTExIi8+CjxwYXRoIGQ9Ik0xNTAgNTBIMjUwVjI1MEgxNTBaIiBzdHJva2U9IiM4YzVhYzgiIHN0cm9rZS13aWR0aD0iMyIvPgo8dGV4dCB4PSIyMDAiIHk9IjE1MCIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzhjNWFjOCI+cG9ydGZvbGlvPC90ZXh0Pgo8L3N2Zz4='">
+          <div class="project-overlay">
+            <div class="project-links">
+              <a href="https://github.com/nemoabu/personalweb" target="_blank" class="btn-primary">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="/" class="btn-secondary">
+                <i class="fas fa-external-link-alt"></i> Live Site
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project-content">
+          <h2>Portfolio Website</h2>
+          <h3>Minimalist Web Presence</h3>
+          <p>A lightweight portfolio built with vanilla HTML, CSS, and JavaScript. Features Google Analytics integration for traffic analysis, optimized for search engines with proper meta tags and sitemap. Demonstrates clean code and performance-first design.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Analytics</span>
+            <span class="tech-tag">SEO</span>
+          </div>
+        </div>
+      </article>
+
       <!-- Food Nimbus -->
       <article class="project-card">
         <div class="project-image">
@@ -147,39 +236,13 @@
         </div>
         <div class="project-content">
           <h2>SmartCart</h2>
-          <h3>Accessible Grocery Checkout</h3>
-          <p>Addressing the challenges of grocery checkout in the digital world by focusing on accessibility features. Built using React and TypeScript, resulting in a 3rd place finish in the hackathon.</p>
+          <h3>Smart Shopping Assistant</h3>
+          <p>A smart shopping cart system with item recognition, an automated shopping list, and theft prevention using computer vision technology. Built with Python/OpenCV and integrates with store inventory systems.</p>
           <div class="tech-stack">
             <span class="tech-tag">React</span>
             <span class="tech-tag">TypeScript</span>
             <span class="tech-tag">Accessibility</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Virtual Pet -->
-      <article class="project-card">
-        <div class="project-image">
-          <img src="images/pet1.png" alt="Virtual Pet">
-          <div class="project-overlay">
-            <div class="project-links">
-              <a href="https://github.com/nemoabu/pet-game" target="_blank" class="btn-primary">
-                <i class="fab fa-github"></i> GitHub
-              </a>
-              <a href="https://youtu.be/E9WgXN-Uq2o" target="_blank" class="btn-secondary">
-                <i class="fa-brands fa-youtube"></i> Demo
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="project-content">
-          <h2>Virtual Pet</h2>
-          <h3>Tamagotchi-Style Simulator</h3>
-          <p>Tamagotchi-style pet simulator built with Maven and JavaFX as part of a group project final for a software engineering class, achieving a 98% grade and successfully meeting all project requirements.</p>
-          <div class="tech-stack">
-            <span class="tech-tag">Java</span>
-            <span class="tech-tag">JavaFX</span>
-            <span class="tech-tag">Maven</span>
+   
           </div>
         </div>
       </article>
@@ -304,6 +367,150 @@
     </div>
   </div>
 
+  <!-- Doomsday Laptop Documentation Modal -->
+  <div id="doomsdayModal" class="modal">
+    <div class="modal-content doomsday-modal-theme">
+      <div class="modal-header">
+        <div class="modal-title">
+          <div class="title-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h2>Doomsday Laptop</h2>
+        </div>
+        <button class="close-btn" id="closeDoomsdayModal">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body doomsday-body">
+        <section class="doomsday-hero">
+          <div class="doomsday-hero-icon"><i class="fas fa-bolt"></i></div>
+          <div>
+            <h3>Offline Survival & Knowledge Hub</h3>
+            <p class="doomsday-lead">A fully open-source, privacy-first laptop for offline research, survival, and self-hosted tools. Built for resilience, privacy, and efficiency no cloud, just you and your data.</p>
+          </div>
+        </section>
+        <section class="doomsday-specs">
+          <div class="spec-block">
+            <span><i class="fas fa-laptop"></i> <b>Device:</b> ThinkPad T14 Gen2</span>
+            <span><i class="fas fa-microchip"></i> <b>CPU:</b> Ryzen 7 PRO</span>
+            <span><i class="fas fa-memory"></i> <b>RAM:</b> 24GB</span>
+            <span><i class="fas fa-hdd"></i> <b>Storage:</b> 1TB NVMe SSD</span>
+            <span><i class="fas fa-desktop"></i> <b>Display:</b> 4K Resolution</span>
+            <span><i class="fas fa-terminal"></i> <b>OS:</b> Pop OS Linux</span>
+          </div>
+        </section>
+        <section class="doomsday-features">
+          <div class="feature-row">
+            <div class="feature-icon"><i class="fas fa-book"></i></div>
+            <div>
+              <h4>Offline Knowledge Access</h4>
+              <ul>
+                <li>Kiwix with full Wikipedia dumps</li>
+                <li>Local, searchable archive of Wikipedia, scientific articles, and survival guides</li>
+                <li>Optimized for fast local querying</li>
+              </ul>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-icon"><i class="fas fa-user-secret"></i></div>
+            <div>
+              <h4>Privacy & Anonymity</h4>
+              <ul>
+                <li>Tails OS on USB stick: plug-and-boot for operational security</li>
+                <li>Integrated Tor Browser for anonymous browsing</li>
+                <li>Ephemeral sessions—leaves no traces behind</li>
+              </ul>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-icon"><i class="fas fa-server"></i></div>
+            <div>
+              <h4>Self-Hosted Ecosystem</h4>
+              <ul>
+                <li>Tailscale VPN mesh for secure device networking</li>
+                <li>Encrypted backups & remote access</li>
+                <li>Lollipop + MPD for offline music streaming</li>
+                <li>FileBrowser + Syncthing for local file management and peer-to-peer sync</li>
+              </ul>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-icon"><i class="fas fa-cube"></i></div>
+            <div>
+              <h4>Virtualization & Isolation</h4>
+              <ul>
+                <li>GNOME Boxes with multiple VMs for sandboxing and security research</li>
+                <li>Pre-configured Linux distros for privacy and malware analysis</li>
+                <li>Segregated VMs for LLM fine-tuning</li>
+              </ul>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-icon"><i class="fas fa-brain"></i></div>
+            <div>
+              <h4>Local AI & LLM</h4>
+              <ul>
+                <li>Primary model: Mistral Nemo 12B - runs smoothly, minimal filtering</li>
+                <li>Integrated through Ollama for efficient local inference</li>
+                <li>Optimized for ThinkPad's AMD GPU acceleration</li>
+                <li>Perfect balance of performance and response freedom</li>
+              </ul>
+              <pre class="code-snippet"><code>ollama run mistral-nemo</code></pre>
+              <div class="command-note">Quick copy-paste command to run the model</div>
+            </div>
+          </div>
+        </section>
+        <section class="doomsday-tools">
+          <h4><i class="fas fa-tools"></i> Open-Source Tool Stack</h4>
+          <div class="tools-list">
+            <span><b>Code:</b> VSCodium</span>
+            <span><b>Images:</b> GIMP / Krita</span>
+            <span><b>Video:</b> Olive / Kdenlive</span>
+            <span><b>Docs:</b> LibreOffice</span>
+            <span><b>Networking:</b> Tailscale + Tor</span>
+          </div>
+        </section>
+        <section class="doomsday-optimizations">
+          <div class="optim-card">
+            <h4><i class="fas fa-shield-alt"></i> Security Architecture</h4>
+            <ul>
+              <li>AMD Ryzen PRO: No Intel Management Engine vulnerabilities</li>
+              <li>Hardware-level security features exclusive to AMD</li>
+              <li>Multiple isolated VMs for different security contexts</li>
+              <li>Complete environment separation for risky operations</li>
+            </ul>
+          </div>
+          <div class="optim-card">
+            <h4><i class="fas fa-cube"></i> VM Security Zones</h4>
+            <ul>
+              <li>Trusted VM: Personal computing & verified software</li>
+              <li>Research VM: Testing unknown applications</li>
+              <li>Hardened VM: High-security operations</li>
+              <li>Disposable VMs: One-time high-risk tasks</li>
+            </ul>
+          </div>
+        </section>
+        <section class="doomsday-usecases">
+          <h4><i class="fas fa-tasks"></i> Use Cases</h4>
+          <div class="usecase-list">
+            <div><i class="fas fa-search"></i> <b>Offline Research:</b> Browse Wikipedia, scientific articles, and cryptography resources without internet.</div>
+            <div><i class="fas fa-user-shield"></i> <b>Privacy-First Computing:</b> Use Tor, Tails OS for anonymity.</div>
+            <div><i class="fas fa-code"></i> <b>Developer Sandbox:</b> Build, test, and isolate software securely in virtual environments.</div>
+            <div><i class="fas fa-solar-panel"></i> <b>Survival Scenario:</b> Operates entirely offline, can be powered by solar panels.</div>
+          </div>
+        </section>
+        <section class="doomsday-future">
+          <h4><i class="fas fa-rocket"></i> Future Plans</h4>
+          <ul>
+            <li>Add IPFS-based content hosting</li>
+            <li>Integrate self-contained password manager with offline sync</li>
+            <li>Expand offline LLM models for code & research</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+
   <!-- Server Setup Guide Modal -->
   <div id="setupModal" class="modal">
     <div class="modal-content">
@@ -412,6 +619,37 @@ RUNTIME_PM_ON_AC=auto
 RUNTIME_PM_ON_BAT=auto</code></pre>
                 </li>
               </ol>
+
+              <h4>Power Monitoring Tools</h4>
+              <div class="monitoring-tools">
+                <ol>
+                  <li>Install monitoring tools:
+                    <pre><code>sudo pacman -S powertop upower acpi</code></pre>
+                  </li>
+                  <li>Monitor real-time power usage:
+                    <pre><code># View detailed power consumption
+powertop
+
+# Check battery status and current draw
+upower -i /org/freedesktop/UPower/devices/battery_BAT0
+
+# Simple battery info
+acpi -V</code></pre>
+                  </li>
+                  <li>Long-term monitoring:
+                    <pre><code># Log power usage every 5 minutes
+while true; do
+  date >> power_log.txt
+  upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "energy-rate|percentage" >> power_log.txt
+  sleep 300
+done</code></pre>
+                  </li>
+                </ol>
+                <div class="info-box">
+                  <i class="fas fa-chart-line"></i>
+                  <p>These tools help verify the 10W power consumption target. PowerTOP especially shows detailed per-component power usage and suggests additional optimizations.</p>
+                </div>
+              </div>
             </div>
           </section>
 
@@ -459,6 +697,46 @@ git init --bare /srv/git/project.git</code></pre>
           <section class="setup-section">
             <h3><i class="fas fa-folder-open"></i> Filebrowser Setup</h3>
             <div class="setup-steps">
+              <div class="feature-showcase">
+                <h4>Why Filebrowser?</h4>
+                <div class="feature-grid">
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-feather"></i>
+                    </div>
+                    <h5>Elegant Simplicity</h5>
+                    <p>Clean, intuitive interface that makes file management feel natural. No bloat, just what you need.</p>
+                  </div>
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-markdown"></i>
+                    </div>
+                    <h5>Markdown Support</h5>
+                    <p>Built-in markdown preview and editor, perfect for documentation and notes. Edit and view files directly in the browser.</p>
+                  </div>
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-hand-pointer"></i>
+                    </div>
+                    <h5>Drag & Drop</h5>
+                    <p>Effortless file uploads with drag and drop support. Move and organize files just like your desktop.</p>
+                  </div>
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h5>Mobile Friendly</h5>
+                    <p>Responsive design works great on all devices. Access your files from phone, tablet, or desktop.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="info-box">
+                <i class="fas fa-lightbulb"></i>
+                <p>Filebrowser's simplicity is its strength. It provides a clean, fast interface without unnecessary complications, making it perfect for personal file management.</p>
+              </div>
+
+              <h4>Installation Steps</h4>
               <ol>
                 <li>Install Filebrowser:
                   <pre><code>curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash</code></pre>
@@ -483,6 +761,16 @@ Restart=on-failure
 WantedBy=multi-user.target</code></pre>
                 </li>
               </ol>
+
+              <div class="feature-tips">
+                <h4>Pro Tips</h4>
+                <ul>
+                  <li><strong>Share Links:</strong> Generate temporary share links for files with expiration times</li>
+                  <li><strong>File Preview:</strong> Preview images, videos, and documents directly in browser</li>
+                  <li><strong>Search:</strong> Quick file search with real-time results</li>
+                  <li><strong>Keyboard Shortcuts:</strong> Power-user features for fast navigation</li>
+                </ul>
+              </div>
             </div>
           </section>
 
@@ -528,6 +816,83 @@ WantedBy=multi-user.target</code></pre>
             <div class="info-box">
               <i class="fas fa-lightbulb"></i>
               <p>Thanks to Tailscale's mesh network, all these services will be securely accessible from any of your devices!</p>
+            </div>
+          </section>
+
+          <section class="setup-section">
+            <h3><i class="fas fa-shield-alt"></i> Tailscale VPN Setup</h3>
+            <div class="setup-steps">
+              <div class="feature-showcase">
+                <h4>Understanding Tailscale VPN</h4>
+                <div class="feature-grid">
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h5>Zero Config VPN</h5>
+                    <p>Unlike traditional VPNs, Tailscale requires no port forwarding or complex configuration. It just works.</p>
+                  </div>
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-fingerprint"></i>
+                    </div>
+                    <h5>WireGuard Based</h5>
+                    <p>Built on WireGuard protocol for maximum security and performance with minimal overhead.</p>
+                  </div>
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h5>Mesh Network</h5>
+                    <p>Direct device-to-device connections when possible, with automatic fallback to relays when needed.</p>
+                  </div>
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-key"></i>
+                    </div>
+                    <h5>Identity-based</h5>
+                    <p>Uses your identity provider (Google, GitHub, etc.) for authentication, no separate passwords needed.</p>
+                  </div>
+                </div>
+              </div>
+
+              <h4>VPN Setup</h4>
+              <ol>
+                <li>Install Tailscale:
+                  <pre><code>sudo pacman -S tailscale
+sudo systemctl enable --now tailscaled</code></pre>
+                </li>
+
+                <li>Connect to Tailscale network:
+                  <pre><code>sudo tailscale up</code></pre>
+                </li>
+
+                <li>Configure VPN (Exit Node):
+                  <div class="info-box">
+                    <i class="fas fa-info-circle"></i>
+                    <p>The repurposed laptop will act as your VPN server (Exit Node). This means all your other devices can route their internet traffic through it when needed.</p>
+                  </div>
+                  <pre><code># On the laptop (Exit Node Provider)
+sudo tailscale up --advertise-exit-node
+
+# Verify setup
+tailscale status    # Should show laptop as "Exit Node: yes"</code></pre>
+                </li>
+              </ol>
+
+              <div class="feature-tips">
+                <h4>Usage Tips</h4>
+                <ul>
+                  <li><strong>Server Role:</strong> Your laptop becomes a private VPN server for all your devices</li>
+                  <li><strong>Client Setup:</strong> Other devices can enable "Use Exit Node" in Tailscale settings to route traffic through the laptop</li>
+                  <li><strong>Multi-Device:</strong> Works across Linux, macOS, iOS, Android, and Windows</li>
+                </ul>
+              </div>
+
+              <div class="info-box">
+                <i class="fas fa-lightbulb"></i>
+                <p>With this setup, you can securely access your server and its services from any device, anywhere, without exposing ports to the internet.</p>
+              </div>
             </div>
           </section>
 
@@ -655,14 +1020,14 @@ WantedBy=multi-user.target</code></pre>
                     <th>Annual Cost</th>
                   </tr>
                   <tr>
-                    <td>Optimized Server</td>
-                    <td>~8W average</td>
-                    <td>≈ $10/year</td>
+                    <td>Super Optimized Server</td>
+                    <td>~10W</td>
+                    <td>≈ $12/year</td>
                   </tr>
                   <tr>
                     <td>Normal Laptop Use</td>
-                    <td>~30W average</td>
-                    <td>≈ $40/year</td>
+                    <td>~50W</td>
+                    <td>≈ $61/year</td>
                   </tr>
                 </table>
               </div>
@@ -722,6 +1087,14 @@ WantedBy=multi-user.target</code></pre>
               </div>
             </div>
             <p class="final-note">This setup demonstrates how repurposed hardware can provide a more cost-effective, energy-efficient, and private alternative to traditional cloud services while maintaining professional-grade functionality.</p>
+          </div>
+          
+          <div class="command-section">
+            <h3><i class="fas fa-terminal"></i> LLM Model Command</h3>
+            <div class="code-snippet">
+              <code>ollama run mistral-nemo</code>
+              <p class="command-note">Run this command to start the Mistral Nemo LLM model on your local machine</p>
+            </div>
           </div>
         </div>
       </div>
