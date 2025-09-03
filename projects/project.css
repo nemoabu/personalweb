@@ -219,12 +219,26 @@ main {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 16px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: headerFadeIn 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
 .section-header p {
   font-size: 1.1rem;
   color: #aaa;
   font-weight: 400;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: headerFadeIn 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes headerFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Project Grids */
@@ -250,7 +264,29 @@ main {
   transition: all 0.4s ease;
   position: relative;
   backdrop-filter: blur(10px);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: projectCardFadeIn 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
+
+@keyframes projectCardFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger animation delays for selected work */
+.selected-work .project-card:nth-child(1) { animation-delay: 0.6s; }
+.selected-work .project-card:nth-child(2) { animation-delay: 0.9s; }
+.selected-work .project-card:nth-child(3) { animation-delay: 1.2s; }
+
+/* Stagger animation delays for all work */
+.all-work .project-card:nth-child(1) { animation-delay: 1.5s; }
+.all-work .project-card:nth-child(2) { animation-delay: 1.8s; }
+.all-work .project-card:nth-child(3) { animation-delay: 2.1s; }
+.all-work .project-card:nth-child(4) { animation-delay: 2.4s; }
+.all-work .project-card:nth-child(5) { animation-delay: 2.7s; }
 
 .project-card:hover {
   transform: translateY(-10px);
