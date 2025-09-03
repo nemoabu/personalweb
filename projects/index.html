@@ -57,7 +57,7 @@
             <span class="tech-tag">3D Graphics</span>
           </div>
           <div class="impact-link">
-            <a href="reviews/muscl3-review.pdf" target="_blank">
+            <a href="#" class="view-impact-btn">
               <i class="fas fa-chart-line"></i> View Impact
             </a>
           </div>
@@ -71,10 +71,7 @@
           <div class="project-overlay">
             <div class="project-links">
               <a href="#" class="btn-primary">
-                <i class="fas fa-server"></i> Server Info
-              </a>
-              <a href="#" class="btn-secondary">
-                <i class="fab fa-github"></i> Setup Guide
+                <i class="fas fa-server"></i> Server Setup Guide
               </a>
             </div>
           </div>
@@ -85,13 +82,13 @@
           <p>A self-hosted Linux server running on my old laptop, providing file hosting, Git services, and development tools. Features automated backups, SSL certificates, and a custom dashboard for monitoring system resources and services.</p>
           <div class="tech-stack">
             <span class="tech-tag">Linux</span>
-            <span class="tech-tag">Docker</span>
-            <span class="tech-tag">Nginx</span>
+            <span class="tech-tag">Tailscale</span>
             <span class="tech-tag">Git</span>
-            <span class="tech-tag">SSL</span>
+            <span class="tech-tag">Filebrowser</span>
+            <span class="tech-tag">Power Optimization</span>
           </div>
           <div class="impact-link">
-            <a href="reviews/linux-server-review.pdf" target="_blank">
+            <a href="#" class="view-impact-btn">
               <i class="fas fa-chart-line"></i> View Impact
             </a>
           </div>
@@ -188,6 +185,548 @@
       </article>
     </div>
   </main>
+
+  <!-- Study Summary Popup Modal -->
+  <div id="studyModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">
+          <div class="title-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h2>Study Summary: Muscl3 vs. MuscleWiki</h2>
+        </div>
+        <button class="close-btn" id="closeModal">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+        <div class="study-overview">
+          <div class="objective-card">
+            <h3><i class="fas fa-bullseye"></i> Objective</h3>
+            <p>Evaluate the effectiveness of two anatomy/fitness tools among 20 randomly assigned participants.</p>
+            <div class="study-groups">
+              <div class="group">
+                <span class="group-label">Group A</span>
+                <span class="group-desc">MuscleWiki (static website)</span>
+              </div>
+              <div class="group">
+                <span class="group-label">Group B</span>
+                <span class="group-desc">Muscl3 (3D interactive model)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="findings-grid">
+          <div class="finding-card engagement">
+            <div class="finding-header">
+              <div class="finding-icon">
+                <i class="fas fa-fire"></i>
+              </div>
+              <h3>Engagement</h3>
+            </div>
+            <div class="finding-content">
+              <p class="finding-highlight">Muscl3 clearly outperformed MuscleWiki in participant engagement.</p>
+              <ul>
+                <li>3D model kept users focused and immersed</li>
+                <li>Prevented wandering clicks and off-topic exploration</li>
+                <li>More compelling visual experience</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="finding-card retention">
+            <div class="finding-header">
+              <div class="finding-icon">
+                <i class="fas fa-brain"></i>
+              </div>
+              <h3>Recall & Knowledge Retention</h3>
+            </div>
+            <div class="finding-content">
+              <p class="finding-highlight">Muscl3 again came out on top.</p>
+              <ul>
+                <li>Better recall of finer anatomical details</li>
+                <li>"Recommended by Creators" feature facilitated discovery</li>
+                <li>Enhanced memory retention among all users</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="finding-card learning">
+            <div class="finding-header">
+              <div class="finding-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h3>Learning Exercises</h3>
+            </div>
+            <div class="finding-content">
+              <div class="comparison">
+                <div class="comparison-item">
+                  <h4>MuscleWiki Strengths</h4>
+                  <ul>
+                    <li>In-depth written explanations</li>
+                    <li>Detailed exercise walkthroughs</li>
+                    <li>Nuanced technique coverage</li>
+                  </ul>
+                </div>
+                <div class="comparison-item">
+                  <h4>Muscl3 Strengths</h4>
+                  <ul>
+                    <li>Concise, expandable video content</li>
+                    <li>Single-page efficiency</li>
+                    <li>Quick reference optimization</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="conclusion-section">
+          <div class="conclusion-card">
+            <h3><i class="fas fa-lightbulb"></i> Best of Both Worlds</h3>
+            <div class="conclusion-grid">
+              <div class="conclusion-item">
+                <span class="conclusion-label">For Deep Learning</span>
+                <span class="conclusion-value">→ MuscleWiki</span>
+              </div>
+              <div class="conclusion-item">
+                <span class="conclusion-label">For Engagement & Fast Recall</span>
+                <span class="conclusion-value">→ Muscl3</span>
+              </div>
+            </div>
+            <p class="final-note">Muscl3 introduces an innovative, immersive approach with higher engagement and retention, while MuscleWiki provides comprehensive depth. Together, they create a cutting-edge learning tool.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Server Setup Guide Modal -->
+  <div id="setupModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">
+          <div class="title-icon">
+            <i class="fas fa-server"></i>
+          </div>
+          <h2>Server Setup Guide</h2>
+        </div>
+        <button class="close-btn" id="closeSetupModal">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="setup-guide">
+          <div class="guide-intro">
+            <div class="distro-selection">
+              <div class="distro-icons">
+                <div class="distro-icon active" title="Arch Linux">
+                  <div class="arch-logo"></div>
+                  <span class="distro-name">Arch</span>
+                </div>
+                <div class="distro-icon" title="Debian">
+                  <div class="debian-logo"></div>
+                  <span class="distro-name">Debian</span>
+                </div>
+                <div class="distro-icon" title="Fedora">
+                  <i class="fab fa-fedora"></i>
+                  <span class="distro-name">Fedora</span>
+                </div>
+                <div class="distro-icon" title="Ubuntu">
+                  <i class="fab fa-ubuntu"></i>
+                  <span class="distro-name">Ubuntu</span>
+                </div>
+              </div>
+              <p class="distro-note">While this guide uses Arch Linux, you can use any Linux distribution. Simply adapt the package installation commands to your distribution's package manager:</p>
+              <div class="package-managers">
+                <code>pacman -S</code> <span class="pkg-note">for Arch</span>
+                <code>apt install</code> <span class="pkg-note">for Debian/Ubuntu</span>
+                <code>dnf install</code> <span class="pkg-note">for Fedora</span>
+              </div>
+            </div>
+          </div>
+
+          <section class="setup-section">
+            <h3><i class="fas fa-laptop"></i> Initial Setup</h3>
+            <div class="setup-steps">
+              <ol>
+                <li>Install your chosen Linux distribution (minimal installation recommended)</li>
+                <li>Create a non-root user with sudo privileges</li>
+                <li>Update the system: <code>sudo pacman -Syu</code></li>
+                <li>Install essential packages:
+                  <code>sudo pacman -S base-devel git openssh tailscale</code>
+                </li>
+              </ol>
+              <div class="info-box">
+                <i class="fas fa-info-circle"></i>
+                <p>A minimal installation reduces resource usage and attack surface, perfect for a dedicated server.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="setup-section">
+            <h3><i class="fas fa-network-wired"></i> Understanding Tailscale</h3>
+            <div class="setup-steps">
+              <div class="tailscale-explainer">
+                <div class="mesh-animation">
+                  <div class="mesh-node home">🏠</div>
+                  <div class="mesh-node laptop">💻</div>
+                  <div class="mesh-node phone">📱</div>
+                  <div class="mesh-node tablet">📱</div>
+                  <div class="mesh-lines"></div>
+                </div>
+                <div class="tailscale-info">
+                  <h4>How Tailscale Works</h4>
+                  <ul>
+                    <li><strong>Mesh Network:</strong> Creates a private network connecting all your devices</li>
+                    <li><strong>Zero Config:</strong> Automatically handles NAT traversal and routing</li>
+                    <li><strong>Security:</strong> End-to-end encryption between devices</li>
+                    <li><strong>Access Control:</strong> Granular permissions for device access</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="setup-section">
+            <h3><i class="fas fa-bolt"></i> Optimization</h3>
+            <div class="setup-steps">
+              <h4>Disable Unnecessary Services</h4>
+              <pre><code>sudo systemctl disable gdm        # Disable GUI
+sudo systemctl disable bluetooth  # Disable Bluetooth
+sudo rfkill block wifi          # Disable WiFi</code></pre>
+              
+              <h4>Power Management</h4>
+              <ol>
+                <li>Install TLP: <code>sudo pacman -S tlp tlp-rdw</code></li>
+                <li>Enable TLP: <code>sudo systemctl enable tlp.service</code></li>
+                <li>Configure in <code>/etc/tlp.conf</code>:
+                  <pre><code>CPU_SCALING_GOVERNOR_ON_AC=powersave
+CPU_SCALING_GOVERNOR_ON_BAT=powersave
+WIFI_PWR_ON_AC=off
+WIFI_PWR_ON_BAT=off
+RUNTIME_PM_ON_AC=auto
+RUNTIME_PM_ON_BAT=auto</code></pre>
+                </li>
+              </ol>
+            </div>
+          </section>
+
+          <section class="setup-section">
+            <h3><i class="fas fa-shield-alt"></i> Tailscale Setup</h3>
+            <div class="setup-steps">
+              <ol>
+                <li>Start Tailscale service:
+                  <code>sudo systemctl start tailscaled</code>
+                </li>
+                <li>Connect to Tailscale network:
+                  <code>sudo tailscale up</code>
+                </li>
+                <li>Enable auto-start:
+                  <code>sudo systemctl enable tailscaled</code>
+                </li>
+                <li>Configure subnet routing (if needed):
+                  <code>sudo tailscale up --advertise-routes=192.168.0.0/24</code>
+                </li>
+              </ol>
+            </div>
+          </section>
+
+          <section class="setup-section">
+            <h3><i class="fab fa-git"></i> Git Server Setup</h3>
+            <div class="setup-steps">
+              <ol>
+                <li>Create git user:
+                  <code>sudo useradd -m -r git</code>
+                </li>
+                <li>Set up SSH keys:
+                  <pre><code>sudo mkdir -p /home/git/.ssh
+sudo cp ~/.ssh/authorized_keys /home/git/.ssh/
+sudo chown -R git:git /home/git/.ssh</code></pre>
+                </li>
+                <li>Create bare repository:
+                  <pre><code>sudo mkdir /srv/git
+sudo chown git:git /srv/git
+git init --bare /srv/git/project.git</code></pre>
+                </li>
+              </ol>
+            </div>
+          </section>
+
+          <section class="setup-section">
+            <h3><i class="fas fa-folder-open"></i> Filebrowser Setup</h3>
+            <div class="setup-steps">
+              <ol>
+                <li>Install Filebrowser:
+                  <pre><code>curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash</code></pre>
+                </li>
+                <li>Create config database:
+                  <code>filebrowser -d /etc/filebrowser.db config init</code>
+                </li>
+                <li>Set up admin user:
+                  <code>filebrowser -d /etc/filebrowser.db users add admin --password 'yourpassword'</code>
+                </li>
+                <li>Configure as service:
+                  <pre><code>[Unit]
+Description=Filebrowser Service
+After=network.target
+
+[Service]
+User=git
+ExecStart=/usr/local/bin/filebrowser -d /etc/filebrowser.db serve
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target</code></pre>
+                </li>
+              </ol>
+            </div>
+          </section>
+
+          <section class="setup-section">
+            <h3><i class="fas fa-rocket"></i> Future Expansions</h3>
+            <div class="expansion-options">
+              <div class="expansion-card">
+                <div class="expansion-icon">
+                  <i class="fas fa-film"></i>
+                </div>
+                <h4>Media Server</h4>
+                <p>Set up Plex or Jellyfin to stream your media collection across devices</p>
+                <div class="expansion-details">
+                  <code>sudo pacman -S jellyfin</code>
+                  <span class="port-info">Default port: 8096</span>
+                </div>
+              </div>
+
+              <div class="expansion-card">
+                <div class="expansion-icon">
+                  <i class="fas fa-music"></i>
+                </div>
+                <h4>Music Streaming</h4>
+                <p>Install Navidrome or Airsonic to access your music library anywhere</p>
+                <div class="expansion-details">
+                  <code>docker run -d navidrome/navidrome</code>
+                  <span class="port-info">Default port: 4533</span>
+                </div>
+              </div>
+
+              <div class="expansion-card">
+                <div class="expansion-icon">
+                  <i class="fas fa-cloud"></i>
+                </div>
+                <h4>Cloud Storage</h4>
+                <p>Deploy NextCloud for personal cloud storage and file sharing</p>
+                <div class="expansion-details">
+                  <code>sudo pacman -S nextcloud</code>
+                  <span class="port-info">Default port: 8080</span>
+                </div>
+              </div>
+            </div>
+            <div class="info-box">
+              <i class="fas fa-lightbulb"></i>
+              <p>Thanks to Tailscale's mesh network, all these services will be securely accessible from any of your devices!</p>
+            </div>
+          </section>
+
+          <section class="setup-section">
+            <h3><i class="fas fa-sticky-note"></i> End Notes</h3>
+            <div class="setup-notes">
+              <ul>
+                <li><strong>Backup Strategy:</strong> Set up regular backups using rsync or restic</li>
+                <li><strong>Monitoring:</strong> Install htop and iotop for resource monitoring</li>
+                <li><strong>Security:</strong> Configure UFW firewall and fail2ban</li>
+                <li><strong>Updates:</strong> Set up automatic security updates</li>
+                <li><strong>Documentation:</strong> Keep a log of all configurations</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Linux Server Impact Modal -->
+  <div id="serverModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">
+          <div class="title-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h2>Impact Analysis: Self-Hosted Linux Server</h2>
+        </div>
+        <button class="close-btn" id="closeServerModal">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+        <div class="intro-card">
+          <div class="intro-icon">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h3>Sustainable Home Server Initiative</h3>
+          <p>This project demonstrates how repurposed hardware can create an efficient, private, and environmentally conscious alternative to cloud services. By giving new life to old technology, we reduce e-waste while building a powerful self-hosted solution.</p>
+        </div>
+
+        <div class="findings-grid">
+          <div class="finding-card">
+            <div class="finding-header">
+              <div class="finding-icon">
+                <i class="fas fa-recycle"></i>
+              </div>
+              <h3>Environmental Impact</h3>
+            </div>
+            <div class="finding-content">
+              <div class="eco-benefits">
+                <div class="eco-benefit">
+                  <h4><i class="fas fa-laptop"></i> E-Waste Reduction</h4>
+                  <p>By repurposing an old laptop, this project prevents approximately 2.5kg of e-waste from reaching landfills, where it could have released harmful chemicals into the environment.</p>
+                </div>
+                <div class="eco-benefit">
+                  <h4><i class="fas fa-industry"></i> Manufacturing Impact</h4>
+                  <p>Reusing existing hardware eliminates the need for new server equipment, saving roughly 300-400kg of CO₂ emissions that would have been generated in manufacturing.</p>
+                </div>
+                <div class="eco-benefit">
+                  <h4><i class="fas fa-data"></i> Data Center Alternative</h4>
+                  <p>Home servers reduce reliance on large data centers, which collectively consume about 1% of global electricity and contribute to significant carbon emissions.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="finding-card">
+            <div class="finding-header">
+              <div class="finding-icon">
+                <i class="fas fa-dollar-sign"></i>
+              </div>
+              <h3>Cost Comparison</h3>
+            </div>
+            <div class="finding-content">
+              <div class="comparison-table">
+                <table>
+                  <tr>
+                    <th>Feature</th>
+                    <th>Self-Hosted Server</th>
+                    <th>Typical Cloud Service (1TB)</th>
+                  </tr>
+                  <tr>
+                    <td>Upfront Cost</td>
+                    <td>$0 (repurposed laptop)</td>
+                    <td>$0 (subscription)</td>
+                  </tr>
+                  <tr>
+                    <td>Monthly Cost</td>
+                    <td>≈ $0.80 (electricity)</td>
+                    <td>≈ $10</td>
+                  </tr>
+                  <tr>
+                    <td>Annual Cost</td>
+                    <td>≈ $10</td>
+                    <td>≈ $120</td>
+                  </tr>
+                  <tr>
+                    <td>3-Year Cost</td>
+                    <td>≈ $30</td>
+                    <td>≈ $360</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="finding-card">
+            <div class="finding-header">
+              <div class="finding-icon">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <h3>Energy Efficiency</h3>
+            </div>
+            <div class="finding-content">
+              <p class="finding-highlight">Optimized for minimal power consumption</p>
+              <div class="comparison-table">
+                <table>
+                  <tr>
+                    <th>Scenario</th>
+                    <th>Avg. Power Use</th>
+                    <th>Annual Cost</th>
+                  </tr>
+                  <tr>
+                    <td>Optimized Server</td>
+                    <td>~8W average</td>
+                    <td>≈ $10/year</td>
+                  </tr>
+                  <tr>
+                    <td>Normal Laptop Use</td>
+                    <td>~30W average</td>
+                    <td>≈ $40/year</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="finding-card">
+            <div class="finding-header">
+              <div class="finding-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3>Privacy & Security</h3>
+            </div>
+            <div class="finding-content">
+              <ul>
+                <li>End-to-End Encryption via Tailscale</li>
+                <li>Complete data ownership</li>
+                <li>No vendor lock-in</li>
+                <li>Offline availability</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="finding-card">
+            <div class="finding-header">
+              <div class="finding-icon">
+                <i class="fas fa-tasks"></i>
+              </div>
+              <h3>Daily Workflow Integration</h3>
+            </div>
+            <div class="finding-content">
+              <ul>
+                <li>Automated Git repository syncing</li>
+                <li>Intuitive photo & media management</li>
+                <li>Remote document access</li>
+                <li>Device Syncing: Seamlessly integrated across macOS, Linux, iOS, and Android platforms.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="conclusion-section">
+          <div class="conclusion-card">
+            <h3><i class="fas fa-lightbulb"></i> Key Benefits</h3>
+            <div class="conclusion-grid">
+              <div class="conclusion-item">
+                <span class="conclusion-label">Cost Savings</span>
+                <span class="conclusion-value">~$110/year</span>
+              </div>
+              <div class="conclusion-item">
+                <span class="conclusion-label">Power Consumption</span>
+                <span class="conclusion-value">73% reduction</span>
+              </div>
+              <div class="conclusion-item">
+                <span class="conclusion-label">Data Control</span>
+                <span class="conclusion-value">100% ownership</span>
+              </div>
+            </div>
+            <p class="final-note">This setup demonstrates how repurposed hardware can provide a more cost-effective, energy-efficient, and private alternative to traditional cloud services while maintaining professional-grade functionality.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="project.js"></script>
 </body>
