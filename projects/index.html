@@ -694,6 +694,83 @@ done</code></pre>
           </section>
 
           <section class="setup-section">
+            <h3><i class="fas fa-shield-alt"></i> Tailscale VPN Setup</h3>
+            <div class="setup-steps">
+              <div class="feature-showcase">
+                <h4>Understanding Tailscale VPN</h4>
+                <div class="feature-grid">
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h5>Zero Config VPN</h5>
+                    <p>Unlike traditional VPNs, Tailscale requires no port forwarding or complex configuration. It just works.</p>
+                  </div>
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-fingerprint"></i>
+                    </div>
+                    <h5>WireGuard Based</h5>
+                    <p>Built on WireGuard protocol for maximum security and performance with minimal overhead.</p>
+                  </div>
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h5>Mesh Network</h5>
+                    <p>Direct device-to-device connections when possible, with automatic fallback to relays when needed.</p>
+                  </div>
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-key"></i>
+                    </div>
+                    <h5>Identity-based</h5>
+                    <p>Uses your identity provider (Google, GitHub, etc.) for authentication, no separate passwords needed.</p>
+                  </div>
+                </div>
+              </div>
+
+              <h4>VPN Setup</h4>
+              <ol>
+                <li>Install Tailscale:
+                  <pre><code>sudo pacman -S tailscale
+sudo systemctl enable --now tailscaled</code></pre>
+                </li>
+
+                <li>Connect to Tailscale network:
+                  <pre><code>sudo tailscale up</code></pre>
+                </li>
+
+                <li>Configure VPN (Exit Node):
+                  <div class="info-box">
+                    <i class="fas fa-info-circle"></i>
+                    <p>The repurposed laptop will act as your VPN server (Exit Node). This means all your other devices can route their internet traffic through it when needed.</p>
+                  </div>
+                  <pre><code># On the laptop (Exit Node Provider)
+sudo tailscale up --advertise-exit-node
+
+# Verify setup
+tailscale status    # Should show laptop as "Exit Node: yes"</code></pre>
+                </li>
+              </ol>
+
+              <div class="feature-tips">
+                <h4>Usage Tips</h4>
+                <ul>
+                  <li><strong>Server Role:</strong> Your laptop becomes a private VPN server for all your devices</li>
+                  <li><strong>Client Setup:</strong> Other devices can enable "Use Exit Node" in Tailscale settings to route traffic through the laptop</li>
+                  <li><strong>Multi-Device:</strong> Works across Linux, macOS, iOS, Android, and Windows</li>
+                </ul>
+              </div>
+
+              <div class="info-box">
+                <i class="fas fa-lightbulb"></i>
+                <p>With this setup, you can securely access your server and its services from any device, anywhere, without exposing ports to the internet.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="setup-section">
             <h3><i class="fab fa-git"></i> Git Server Setup</h3>
             <div class="setup-steps">
               <ol>
@@ -836,83 +913,6 @@ WantedBy=multi-user.target</code></pre>
             <div class="info-box">
               <i class="fas fa-lightbulb"></i>
               <p>Thanks to Tailscale's mesh network, all these services will be securely accessible from any of your devices!</p>
-            </div>
-          </section>
-
-          <section class="setup-section">
-            <h3><i class="fas fa-shield-alt"></i> Tailscale VPN Setup</h3>
-            <div class="setup-steps">
-              <div class="feature-showcase">
-                <h4>Understanding Tailscale VPN</h4>
-                <div class="feature-grid">
-                  <div class="feature-card">
-                    <div class="feature-icon">
-                      <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h5>Zero Config VPN</h5>
-                    <p>Unlike traditional VPNs, Tailscale requires no port forwarding or complex configuration. It just works.</p>
-                  </div>
-                  <div class="feature-card">
-                    <div class="feature-icon">
-                      <i class="fas fa-fingerprint"></i>
-                    </div>
-                    <h5>WireGuard Based</h5>
-                    <p>Built on WireGuard protocol for maximum security and performance with minimal overhead.</p>
-                  </div>
-                  <div class="feature-card">
-                    <div class="feature-icon">
-                      <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <h5>Mesh Network</h5>
-                    <p>Direct device-to-device connections when possible, with automatic fallback to relays when needed.</p>
-                  </div>
-                  <div class="feature-card">
-                    <div class="feature-icon">
-                      <i class="fas fa-key"></i>
-                    </div>
-                    <h5>Identity-based</h5>
-                    <p>Uses your identity provider (Google, GitHub, etc.) for authentication, no separate passwords needed.</p>
-                  </div>
-                </div>
-              </div>
-
-              <h4>VPN Setup</h4>
-              <ol>
-                <li>Install Tailscale:
-                  <pre><code>sudo pacman -S tailscale
-sudo systemctl enable --now tailscaled</code></pre>
-                </li>
-
-                <li>Connect to Tailscale network:
-                  <pre><code>sudo tailscale up</code></pre>
-                </li>
-
-                <li>Configure VPN (Exit Node):
-                  <div class="info-box">
-                    <i class="fas fa-info-circle"></i>
-                    <p>The repurposed laptop will act as your VPN server (Exit Node). This means all your other devices can route their internet traffic through it when needed.</p>
-                  </div>
-                  <pre><code># On the laptop (Exit Node Provider)
-sudo tailscale up --advertise-exit-node
-
-# Verify setup
-tailscale status    # Should show laptop as "Exit Node: yes"</code></pre>
-                </li>
-              </ol>
-
-              <div class="feature-tips">
-                <h4>Usage Tips</h4>
-                <ul>
-                  <li><strong>Server Role:</strong> Your laptop becomes a private VPN server for all your devices</li>
-                  <li><strong>Client Setup:</strong> Other devices can enable "Use Exit Node" in Tailscale settings to route traffic through the laptop</li>
-                  <li><strong>Multi-Device:</strong> Works across Linux, macOS, iOS, Android, and Windows</li>
-                </ul>
-              </div>
-
-              <div class="info-box">
-                <i class="fas fa-lightbulb"></i>
-                <p>With this setup, you can securely access your server and its services from any device, anywhere, without exposing ports to the internet.</p>
-              </div>
             </div>
           </section>
 
