@@ -40,6 +40,67 @@ header {
   background-color: #000;
 }
 
+/* Engagement Section Styles */
+.engagement-insight {
+  margin-top: 1.5rem;
+  padding: 0 1rem;
+}
+
+.insight-box {
+  background: rgba(140, 90, 200, 0.1);
+  border: 1px solid rgba(140, 90, 200, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.insight-box:hover {
+  background: rgba(140, 90, 200, 0.15);
+  transform: translateY(-2px);
+}
+
+.insight-box > i {
+  font-size: 1.5rem;
+  color: #8c5ac8;
+  margin-top: 0.25rem;
+}
+
+.insight-content {
+  flex: 1;
+}
+
+.insight-content h4 {
+  color: #8c5ac8;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.insight-content p {
+  color: #e0e0e0;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.engagement-benefits {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.engagement-benefits li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  color: #ccc;
+}
+
+.engagement-benefits li i {
+  color: #8c5ac8;
+  font-size: 0.9rem;
+}
+
 nav a {
   margin-left: 20px;
   text-decoration: none;
