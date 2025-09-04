@@ -212,6 +212,35 @@ header {
   font-weight: 500;
 }
 
+/* Source Link Styles */
+.source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  background: rgba(140, 90, 200, 0.1);
+  border: 1px solid rgba(140, 90, 200, 0.2);
+  border-radius: 6px;
+  color: #8c5ac8;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.source-link:hover {
+  background: rgba(140, 90, 200, 0.2);
+  transform: translateY(-2px);
+}
+
+.source-link i {
+  font-size: 0.9rem;
+}
+
+.eco-benefit {
+  margin-bottom: 2rem;
+}
+
 nav a {
   margin-left: 20px;
   text-decoration: none;
