@@ -18,11 +18,11 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Modal functionality
-    const studyModal = document.getElementById('studyModal');
+    const muscl3Modal = document.getElementById('muscl3Modal');
     const serverModal = document.getElementById('serverModal');
     const setupModal = document.getElementById('setupModal');
     const doomsdayModal = document.getElementById('doomsdayModal');
-    const closeStudyBtn = document.getElementById('closeModal');
+    const closeMuscl3Btn = document.getElementById('closeMuscl3Modal');
     const closeServerBtn = document.getElementById('closeServerModal');
     const closeSetupBtn = document.getElementById('closeSetupModal');
     const closeDoomsdayBtn = document.getElementById('closeDoomsdayModal');
@@ -39,16 +39,16 @@ document.addEventListener("DOMContentLoaded", function() {
             
             if (projectTitle.includes('linux')) {
                 serverModal.style.display = 'block';
-            } else {
-                studyModal.style.display = 'block';
+            } else if (projectTitle.includes('muscl3')) {
+                muscl3Modal.style.display = 'block';
             }
             document.body.style.overflow = 'hidden'; // Prevent background scrolling
         });
     });
 
     // Close modal when close buttons are clicked
-    closeStudyBtn.addEventListener('click', function() {
-        studyModal.style.display = 'none';
+    closeMuscl3Btn.addEventListener('click', function() {
+        muscl3Modal.style.display = 'none';
         document.body.style.overflow = 'auto'; // Restore scrolling
     });
 
@@ -59,8 +59,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Close modals when clicking outside of them
     window.addEventListener('click', function(e) {
-        if (e.target === studyModal) {
-            studyModal.style.display = 'none';
+        if (e.target === muscl3Modal) {
+            muscl3Modal.style.display = 'none';
             document.body.style.overflow = 'auto';
         }
         if (e.target === serverModal) {
