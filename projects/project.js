@@ -16,6 +16,78 @@ document.addEventListener("DOMContentLoaded", function() {
             this.style.transform = 'translateY(0) scale(1)';
         });
     });
+    
+    // C7 tooltip position adjustment
+    const c7InfoIcons = document.querySelectorAll('.c7-info');
+    
+    // Function to adjust tooltip position
+    function adjustTooltipPosition(icon) {
+        const tooltip = icon.parentNode.querySelector('.c7-tooltip');
+        if (!tooltip) return;
+        
+        // Get positions and dimensions
+        const iconRect = icon.getBoundingClientRect();
+        const tooltipHeight = tooltip.offsetHeight;
+        const tooltipWidth = tooltip.offsetWidth;
+        const windowHeight = window.innerHeight;
+        const windowWidth = window.innerWidth;
+        const spaceAbove = iconRect.top;
+        const spaceBelow = windowHeight - iconRect.bottom;
+        const spaceLeft = iconRect.left;
+        const spaceRight = windowWidth - iconRect.right;
+        
+        // Decide whether to show above or below
+        if (spaceBelow > tooltipHeight + 20 || spaceBelow > spaceAbove) {
+            // Show below
+            tooltip.classList.add('tooltip-bottom');
+            tooltip.classList.remove('tooltip-top');
+        } else {
+            // Show above
+            tooltip.classList.add('tooltip-top');
+            tooltip.classList.remove('tooltip-bottom');
+        }
+        
+        // Adjust horizontal position if near screen edges
+        if (spaceLeft < tooltipWidth / 2) {
+            // Too close to left edge
+            tooltip.style.left = '0';
+            tooltip.style.transform = 'translateX(0)';
+            // Adjust the arrow position
+            const arrowLeft = iconRect.left + (iconRect.width / 2);
+            tooltip.style.setProperty('--arrow-left', arrowLeft + 'px');
+        } else if (spaceRight < tooltipWidth / 2) {
+            // Too close to right edge
+            tooltip.style.left = 'auto';
+            tooltip.style.right = '0';
+            tooltip.style.transform = 'translateX(0)';
+            // Adjust the arrow position
+            const arrowRight = spaceRight + (iconRect.width / 2);
+            tooltip.style.setProperty('--arrow-right', arrowRight + 'px');
+        } else {
+            // Default centered position
+            tooltip.style.left = '50%';
+            tooltip.style.right = 'auto';
+            tooltip.style.transform = 'translateX(-50%)';
+            tooltip.style.removeProperty('--arrow-left');
+            tooltip.style.removeProperty('--arrow-right');
+        }
+    }
+    
+    // Add event listeners to icons
+    c7InfoIcons.forEach(icon => {
+        icon.addEventListener('mouseenter', function() {
+            adjustTooltipPosition(this);
+        });
+    });
+    
+    // Recalculate on window resize
+    window.addEventListener('resize', function() {
+        // If any tooltip is visible, recalculate its position
+        const activeIcon = document.querySelector('.c7-info:hover');
+        if (activeIcon) {
+            adjustTooltipPosition(activeIcon);
+        }
+    });
 
     // Modal functionality
     const muscl3Modal = document.getElementById('muscl3Modal');
