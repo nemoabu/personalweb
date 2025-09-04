@@ -1156,24 +1156,76 @@ WantedBy=multi-user.target</code></pre>
             </div>
             <div class="finding-content">
               <p class="finding-highlight">Optimized for minimal power consumption</p>
-              <div class="comparison-table">
-                <table>
-                  <tr>
-                    <th>Scenario</th>
-                    <th>Avg. Power Use</th>
-                    <th>Annual Cost</th>
-                  </tr>
-                  <tr>
-                    <td>Super Optimized Server</td>
-                    <td>~10W</td>
-                    <td>≈ $12/year</td>
-                  </tr>
-                  <tr>
-                    <td>Normal Laptop Use</td>
-                    <td>~50W</td>
-                    <td>≈ $61/year</td>
-                  </tr>
-                </table>
+              
+              <div class="power-scenarios">
+                <div class="power-scenario">
+                  <h4><i class="fas fa-laptop"></i> Normal Laptop Usage</h4>
+                  <div class="powertop-output">
+                    <div class="metric">
+                      <span class="metric-label">Power Draw:</span>
+                      <span class="metric-value">~50W</span>
+                    </div>
+                    <div class="metric">
+                      <span class="metric-label">Battery Life:</span>
+                      <span class="metric-value">4-5 hours</span>
+                    </div>
+                    <div class="metric">
+                      <span class="metric-label">CPU Idle (C7):</span>
+                      <span class="metric-value">~10%</span>
+                    </div>
+                    <div class="power-consumers">
+                      <span class="consumer-label">Top Consumers:</span>
+                      <ul>
+                        <li>GUI & Chrome: 15.0W</li>
+                        <li>System Services: 7.5W</li>
+                        <li>Background Apps: 8.0W</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="power-scenario optimized">
+                  <h4><i class="fas fa-server"></i> Optimized Server Mode</h4>
+                  <div class="powertop-output">
+                    <div class="metric">
+                      <span class="metric-label">Power Draw:</span>
+                      <span class="metric-value highlight">~10W</span>
+                    </div>
+                    <div class="metric">
+                      <span class="metric-label">Battery Life:</span>
+                      <span class="metric-value highlight">18-22 hours</span>
+                    </div>
+                    <div class="metric">
+                      <span class="metric-label">CPU Idle (C7):</span>
+                      <span class="metric-value highlight">~38%</span>
+                    </div>
+                    <div class="power-consumers">
+                      <span class="consumer-label">Top Consumers:</span>
+                      <ul>
+                        <li>Tailscale: 0.8W</li>
+                        <li>System Core: 0.8W</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="optimization-summary">
+                <div class="summary-metric">
+                  <i class="fas fa-bolt"></i>
+                  <span class="metric-title">Power Reduction</span>
+                  <span class="metric-value">80%</span>
+                </div>
+                <div class="summary-metric">
+                  <i class="fas fa-clock"></i>
+                  <span class="metric-title">Battery Life Increase</span>
+                  <span class="metric-value">350%</span>
+                </div>
+                <div class="summary-metric">
+                  <i class="fas fa-leaf"></i>
+                  <span class="metric-title">Annual Energy Savings</span>
+                  <span class="metric-value">350 kWh</span>
+                </div>
               </div>
             </div>
           </div>

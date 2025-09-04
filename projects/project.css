@@ -101,6 +101,117 @@ header {
   font-size: 0.9rem;
 }
 
+/* Power Consumption Styles */
+.power-scenarios {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.power-scenario {
+  background: rgba(140, 90, 200, 0.1);
+  border: 1px solid rgba(140, 90, 200, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.power-scenario h4 {
+  color: #8c5ac8;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.power-scenario.optimized {
+  background: rgba(140, 90, 200, 0.15);
+  border-color: rgba(140, 90, 200, 0.3);
+}
+
+.powertop-output {
+  font-family: 'Menlo', 'Monaco', monospace;
+  font-size: 0.9rem;
+}
+
+.metric {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(140, 90, 200, 0.2);
+}
+
+.metric-label {
+  color: #ccc;
+}
+
+.metric-value {
+  color: #fff;
+}
+
+.metric-value.highlight {
+  color: #8c5ac8;
+  font-weight: 500;
+}
+
+.power-consumers {
+  margin-top: 1rem;
+}
+
+.consumer-label {
+  color: #ccc;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.power-consumers ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.power-consumers li {
+  color: #e0e0e0;
+  margin-bottom: 0.25rem;
+  font-size: 0.85rem;
+}
+
+.optimization-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.summary-metric {
+  background: rgba(140, 90, 200, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.summary-metric i {
+  color: #8c5ac8;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.metric-title {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.summary-metric .metric-value {
+  color: #8c5ac8;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
 nav a {
   margin-left: 20px;
   text-decoration: none;
