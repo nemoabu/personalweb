@@ -251,6 +251,18 @@ nav a:hover {
   font-size: 14px;
 }
 
+.card-text a {
+  color: #b36aff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.card-text a:hover {
+  color: #d4a5ff;
+  text-decoration: underline;
+}
+
 /* Books section */
 .books {
   background-color: #111;
@@ -532,6 +544,64 @@ nav a:hover {
 .resume-btn:hover .btn-icon {
   transform: translateY(-2px);
 }
+
+/* Job Details Styles */
+.job-details {
+  color: #888;
+  font-size: 0.85em;
+  margin: 8px 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(26, 26, 26, 0.6);
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(179, 106, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.job-icon {
+  font-size: 1em;
+  color: #b36aff;
+  opacity: 0.9;
+}
+
+.date {
+  color: #b36aff;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.job-details:hover {
+  border-color: rgba(179, 106, 255, 0.3);
+  background: rgba(26, 26, 26, 0.8);
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .job-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .job-duration::after,
+  .job-location::after {
+    display: none;
+  }
+}
+
+.description-container {
+  min-height: 80px;
+  margin: 12px 0;
+}
+
+.description-container p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+
 
 @media (max-width: 768px) {
   .resume-card {
