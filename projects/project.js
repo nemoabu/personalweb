@@ -1,5 +1,54 @@
 // Simple JavaScript for projects page
 document.addEventListener("DOMContentLoaded", function() {
+    // CPU tooltip: allow click to show on mobile
+    document.querySelectorAll('.cpu-tooltip-word').forEach(function(el) {
+        el.addEventListener('click', function(e) {
+            var tooltip = el.querySelector('.cpu-tooltip-text');
+            if (tooltip) {
+                var isVisible = tooltip.style.visibility === 'visible' || window.getComputedStyle(tooltip).visibility === 'visible';
+                if (!isVisible) {
+                    tooltip.style.visibility = 'visible';
+                    tooltip.style.opacity = '1';
+                } else {
+                    tooltip.style.visibility = '';
+                    tooltip.style.opacity = '';
+                }
+                e.stopPropagation();
+            }
+        });
+    });
+    // Hide CPU tooltip if clicking elsewhere
+    document.addEventListener('click', function(e) {
+        document.querySelectorAll('.cpu-tooltip-word .cpu-tooltip-text').forEach(function(tooltip) {
+            tooltip.style.visibility = '';
+            tooltip.style.opacity = '';
+        });
+    });
+    // Docker tooltip: allow click to show on mobile
+    document.querySelectorAll('.docker-tooltip-word').forEach(function(el) {
+        el.addEventListener('click', function(e) {
+            // Toggle tooltip on click (for mobile)
+            var tooltip = el.querySelector('.docker-tooltip-text');
+            if (tooltip) {
+                var isVisible = tooltip.style.visibility === 'visible' || window.getComputedStyle(tooltip).visibility === 'visible';
+                if (!isVisible) {
+                    tooltip.style.visibility = 'visible';
+                    tooltip.style.opacity = '1';
+                } else {
+                    tooltip.style.visibility = '';
+                    tooltip.style.opacity = '';
+                }
+                e.stopPropagation();
+            }
+        });
+    });
+    // Hide tooltip if clicking elsewhere
+    document.addEventListener('click', function(e) {
+        document.querySelectorAll('.docker-tooltip-word .docker-tooltip-text').forEach(function(tooltip) {
+            tooltip.style.visibility = '';
+            tooltip.style.opacity = '';
+        });
+    });
     console.log("Projects page loaded successfully");
     
     // Add smooth scroll behavior

@@ -389,7 +389,7 @@
         <section class="doomsday-specs">
           <div class="spec-block">
             <span><i class="fas fa-laptop"></i> <b>Device:</b> ThinkPad T14 Gen2</span>
-            <span><i class="fas fa-microchip"></i> <b>CPU:</b> Ryzen 7 PRO</span>
+            <span><i class="fas fa-microchip"></i> <b>CPU:</b> <span class="cpu-tooltip-word">Ryzen 7 PRO<span class="cpu-tooltip-text">Intel ME (Management Engine) has deep system access and is closed-source, making it a bigger security risk. AMD PSP (Platform Security Processor) is also privileged, but is less invasive and has fewer known remote exploits. AMD offers better transparency and less risk of hidden backdoors at the hardware level.</span></span></span>
             <span><i class="fas fa-memory"></i> <b>RAM:</b> 24GB</span>
             <span><i class="fas fa-hdd"></i> <b>Storage:</b> 1TB NVMe SSD</span>
             <span><i class="fas fa-desktop"></i> <b>Display:</b> 4K Resolution</span>
@@ -467,26 +467,7 @@
             <span><b>Networking:</b> Tailscale + Tor</span>
           </div>
         </section>
-        <section class="doomsday-optimizations">
-          <div class="optim-card">
-            <h4><i class="fas fa-shield-alt"></i> Security Architecture</h4>
-            <ul>
-              <li>AMD Ryzen PRO: No Intel Management Engine vulnerabilities</li>
-              <li>Hardware-level security features exclusive to AMD</li>
-              <li>Multiple isolated VMs for different security contexts</li>
-              <li>Complete environment separation for risky operations</li>
-            </ul>
-          </div>
-          <div class="optim-card">
-            <h4><i class="fas fa-cube"></i> VM Security Zones</h4>
-            <ul>
-              <li>Trusted VM: Personal computing & verified software</li>
-              <li>Research VM: Testing unknown applications</li>
-              <li>Hardened VM: High-security operations</li>
-              <li>Disposable VMs: One-time high-risk tasks</li>
-            </ul>
-          </div>
-        </section>
+        
         <section class="doomsday-usecases">
           <h4><i class="fas fa-tasks"></i> Use Cases</h4>
           <div class="usecase-list">
@@ -522,9 +503,7 @@
         <section class="doomsday-future">
           <h4><i class="fas fa-rocket"></i> Future Plans</h4>
           <ul>
-            <li>Add IPFS-based content hosting</li>
-            <li>Integrate self-contained password manager with offline sync</li>
-            <li>Expand offline LLM models for code & research</li>
+            <li>Exploring <span class="docker-tooltip-word">Docker<span class="docker-tooltip-text">Docker is a platform for developing, shipping, and running applications in isolated containers. It helps ensure consistency and security by isolating apps from each other and the host system.</span></span> and learning the importance of isolation</li>
           </ul>
         </section>
       </div>

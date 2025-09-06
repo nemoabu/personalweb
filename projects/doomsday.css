@@ -1,3 +1,71 @@
+/* CPU tooltip styles */
+.cpu-tooltip-word {
+    position: relative;
+    cursor: pointer;
+    color: #b36aff;
+    border-bottom: 1px dotted #b36aff;
+}
+
+.cpu-tooltip-word .cpu-tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    width: 300px;
+    background: #222;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    position: absolute;
+    z-index: 10;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    transition: opacity 0.2s;
+    font-size: 0.95rem;
+    pointer-events: none;
+}
+
+.cpu-tooltip-word:hover .cpu-tooltip-text,
+.cpu-tooltip-word:focus .cpu-tooltip-text {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+/* Docker tooltip styles */
+.docker-tooltip-word {
+    position: relative;
+    cursor: pointer;
+    color: #b36aff;
+    border-bottom: 1px dotted #b36aff;
+}
+
+.docker-tooltip-word .docker-tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    width: 260px;
+    background: #222;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    position: absolute;
+    z-index: 10;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    transition: opacity 0.2s;
+    font-size: 0.95rem;
+    pointer-events: none;
+}
+
+.docker-tooltip-word:hover .docker-tooltip-text,
+.docker-tooltip-word:focus .docker-tooltip-text {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
 /* Doomsday Modal Styles */
 .doomsday-modal-theme {
     background: #1a1a1a;
