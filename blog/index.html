@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Blog — Abdullokh</title>
+  <title>Blog — Abdullok</title>
   <link rel="stylesheet" href="blog.css" />
   <link rel="icon" href="../fav.png" type="image/png">
 </head>
@@ -33,7 +33,74 @@
     <div class="blog-posts" style="display: none;">
       <article class="blog-post">
         <div class="blog-header" onclick="togglePost(this)">
+          <h2>The Funny Line Between Centralization and Crypto</h2>
+          <span class="post-label crypto">Crypto</span>
+          <span class="toggle-icon">+</span>
+        </div>
+        <div class="blog-content">
+          <div class="blog-intro">
+            <p>When you hear crypto and realize how it works in a decentralized manner where there is no centralized system in place that controls the flow but rather blockchain is used, what if I tell you we might not fully understand what this means.</p>
+          </div>
+
+          <div class="blog-section">
+            <h3>The Two Types of Blockchain Mining</h3>
+            <p>Currently there are two types of blockchain transaction mining and transaction verification: proof of work and proof of stake.</p>
+            <p>You can look deeper into each as it's a complex way to deal with cryptocurrencies but to dumb each one down:</p>
+            <ul>
+              <li><strong>Proof of work</strong> uses complex math computations done by hardware GPUs and CPUs</li>
+              <li><strong>Proof of stake</strong> uses staking where the currency is deposited to earn more of it through validators that give more rewards</li>
+            </ul>
+            <p>Let's see why each in long term might have a weird relation with centralization.</p>
+          </div>
+
+          <div class="blog-section">
+            <h3>The Centralization Problem</h3>
+            <p>When you think about centralization you think of a big giant entity that is responsible for most if not all of the certain subject: money, software, etc.</p>
+            <p>Now think about each type of proofing. In proof of work mining gets more complex as more devices are connected to the blockchain, which means if you own more hardware like GPUs and CPUs (depending on crypto - Bitcoin uses GPUs, Monero uses CPUs). If a certain entity decides to own or create or invest into mining facilities, such as OpenAI or any other decides to repurpose all their hardware from LLM to mining or anyone buys out the entire hardware creating a shortage for others as well as that entity having the ability to mine most of the crypto and own it (making the process more centralized).</p>
+          </div>
+
+          <div class="blog-section">
+            <h3>Proof of Stake: Even Worse?</h3>
+            <p>Proof of stake is no better in fact I would consider it worse. The more of the crypto you own the more you can earn in rewards which is centralization at its finest and scary enough there is a possibility for censorship.</p>
+            
+            <h4>Censorship Power (in theory)</h4>
+            <p>If a few validators collectively own <strong>>33%</strong> (in some PoS systems like Ethereum), they can:</p>
+            <ul>
+              <li>Refuse to include certain transactions</li>
+              <li>Delay finality by not voting for certain blocks</li>
+            </ul>
+            
+            <p>If they control <strong>>66%</strong>, they can:</p>
+            <ul>
+              <li>Completely censor any transaction they dislike</li>
+              <li>Finalize only the blocks they approve</li>
+              <li>Even rewrite short segments of chain history</li>
+            </ul>
+            
+            <p>That's why large staking pools are a real centralization threat - they could act like gatekeepers, even if it's just a few entities (e.g., Lido, Coinbase, Binance, Kraken) controlling >50% of staked ETH.</p>
+          </div>
+
+          <div class="blog-section">
+            <h3>Example: Ethereum Today (as of 2025)</h3>
+            <p>Roughly:</p>
+            <ul>
+              <li><strong>Lido:</strong> ~30% of all staked ETH</li>
+              <li><strong>Coinbase + Binance + Kraken</strong> combined: ~20–25%</li>
+            </ul>
+            <p>That's already >50% controlled by just <strong>4 entities</strong> - meaning a small coordinated group <em>could</em> heavily influence transaction flow.</p>
+          </div>
+
+          <div class="blog-section">
+            <h3>Final Thoughts</h3>
+            <p>This is all to say that we still do not have a solution to crypto. As we innovate in the space we can only hope that better solutions are implemented.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-post">
+        <div class="blog-header" onclick="togglePost(this)">
           <h2>The Hidden Sodium in Our Daily Diet: A Wake-Up Call</h2>
+          <span class="post-label health">Health</span>
           <span class="toggle-icon">+</span>
         </div>
         <div class="blog-content">
@@ -85,6 +152,7 @@
       <article class="blog-post">
         <div class="blog-header" onclick="togglePost(this)">
           <h2>Think Deleted Files Are Gone Forever? The Truth About Data Recovery</h2>
+          <span class="post-label general-tech">General Tech</span>
           <span class="toggle-icon">+</span>
         </div>
         <div class="blog-content">
@@ -232,6 +300,7 @@ When Saving a New File:
         <article class="blog-post">
           <div class="blog-header" onclick="togglePost(this)">
             <h2>Did You Know We’re Heavily Lacking in Fiber?</h2>
+            <span class="post-label health">Health</span>
             <span class="toggle-icon">+</span>
           </div>
           <div class="blog-content">
@@ -268,6 +337,7 @@ When Saving a New File:
       <article class="blog-post">
         <div class="blog-header" onclick="togglePost(this)">
           <h2>The Hidden Computers Inside Your Computer and Why Privacy Is at Risk</h2>
+          <span class="post-label general-tech">General Tech</span>
           <span class="toggle-icon">+</span>
         </div>
         <div class="blog-content">
@@ -357,6 +427,7 @@ When Saving a New File:
       <article class="blog-post">
         <div class="blog-header" onclick="togglePost(this)">
           <h2>Rethinking Crypto: Why Bitcoin and Monero Might Be the Only Coins That Matter</h2>
+          <span class="post-label crypto">Crypto</span>
           <span class="toggle-icon">+</span>
         </div>
         <div class="blog-content">
@@ -449,6 +520,7 @@ When Saving a New File:
       <article class="blog-post">
         <div class="blog-header" onclick="togglePost(this)">
           <h2>What is Decentralization / Web3?</h2>
+          <span class="post-label crypto">Crypto</span>
           <span class="toggle-icon">+</span>
         </div>
         <div class="blog-content">
@@ -494,6 +566,72 @@ When Saving a New File:
           <div class="blog-section">
             <h3>Final Thoughts</h3>
             <p>This is a super simplified overview of a massive topic. I'm not saying centralized systems are evil or telling you to switch, just be aware. Understanding that we're working with shades of gray, not black and white, helps us make better choices about which systems to use and how to improve them. These things impact everyone, and it's worth learning about.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-post">
+        <div class="blog-header" onclick="togglePost(this)">
+          <h2>The Funny Line Between Centralization and Crypto</h2>
+          <span class="post-label crypto">Crypto</span>
+          <span class="toggle-icon">+</span>
+        </div>
+        <div class="blog-content">
+          <div class="blog-intro">
+            <p>When you hear crypto and realize how it works in a decentralized manner where there is no centralized system in place that controls the flow but rather blockchain is used, what if I tell you we might not fully understand what this means.</p>
+          </div>
+
+          <div class="blog-section">
+            <h3>The Two Types of Blockchain Mining</h3>
+            <p>Currently there are two types of blockchain transaction mining and transaction verification: proof of work and proof of stake.</p>
+            <p>You can look deeper into each as it's a complex way to deal with cryptocurrencies but to dumb each one down:</p>
+            <ul>
+              <li><strong>Proof of work</strong> uses complex math computations done by hardware GPUs and CPUs</li>
+              <li><strong>Proof of stake</strong> uses staking where the currency is deposited to earn more of it through validators that give more rewards</li>
+            </ul>
+            <p>Let's see why each in long term might have a weird relation with centralization.</p>
+          </div>
+
+          <div class="blog-section">
+            <h3>The Centralization Problem</h3>
+            <p>When you think about centralization you think of a big giant entity that is responsible for most if not all of the certain subject: money, software, etc.</p>
+            <p>Now think about each type of proofing. In proof of work mining gets more complex as more devices are connected to the blockchain, which means if you own more hardware like GPUs and CPUs (depending on crypto - Bitcoin uses GPUs, Monero uses CPUs). If a certain entity decides to own or create or invest into mining facilities, such as OpenAI or any other decides to repurpose all their hardware from LLM to mining or anyone buys out the entire hardware creating a shortage for others as well as that entity having the ability to mine most of the crypto and own it (making the process more centralized).</p>
+          </div>
+
+          <div class="blog-section">
+            <h3>Proof of Stake: Even Worse?</h3>
+            <p>Proof of stake is no better in fact I would consider it worse. The more of the crypto you own the more you can earn in rewards which is centralization at its finest and scary enough there is a possibility for censorship.</p>
+            
+            <h4>Censorship Power (in theory)</h4>
+            <p>If a few validators collectively own <strong>>33%</strong> (in some PoS systems like Ethereum), they can:</p>
+            <ul>
+              <li>Refuse to include certain transactions</li>
+              <li>Delay finality by not voting for certain blocks</li>
+            </ul>
+            
+            <p>If they control <strong>>66%</strong>, they can:</p>
+            <ul>
+              <li>Completely censor any transaction they dislike</li>
+              <li>Finalize only the blocks they approve</li>
+              <li>Even rewrite short segments of chain history</li>
+            </ul>
+            
+            <p>That's why large staking pools are a real centralization threat - they could act like gatekeepers, even if it's just a few entities (e.g., Lido, Coinbase, Binance, Kraken) controlling >50% of staked ETH.</p>
+          </div>
+
+          <div class="blog-section">
+            <h3>Example: Ethereum Today (as of 2025)</h3>
+            <p>Roughly:</p>
+            <ul>
+              <li><strong>Lido:</strong> ~30% of all staked ETH</li>
+              <li><strong>Coinbase + Binance + Kraken</strong> combined: ~20–25%</li>
+            </ul>
+            <p>That's already >50% controlled by just <strong>4 entities</strong> - meaning a small coordinated group <em>could</em> heavily influence transaction flow.</p>
+          </div>
+
+          <div class="blog-section">
+            <h3>Final Thoughts</h3>
+            <p>This is all to say that we still do not have a solution to crypto. As we innovate in the space we can only hope that better solutions are implemented.</p>
           </div>
         </div>
       </article>
@@ -608,6 +746,55 @@ When Saving a New File:
     .ai-note strong {
       color: rgb(126, 34, 206);
     }
+
+    .blog-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .blog-header h2 {
+      flex: 1;
+      margin: 0;
+    }
+
+    .post-label {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: 0.75em;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      border: 1px solid;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+    }
+    .post-label.crypto {
+      background: rgba(179, 106, 255, 0.15);
+      border-color: rgba(179, 106, 255, 0.4);
+      color: #d4a5ff;
+    }
+    .post-label.health {
+      background: rgba(255, 106, 149, 0.15);
+      border-color: rgba(255, 106, 149, 0.4);
+      color: #ffb3d1;
+    }
+    .post-label.general-tech {
+      background: rgba(106, 179, 255, 0.15);
+      border-color: rgba(106, 179, 255, 0.4);
+      color: #a5d4ff;
+    }
+    .blog-header:hover .post-label {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(179, 106, 255, 0.3);
+    }
+
+    .toggle-icon {
+      flex-shrink: 0;
+      margin-left: auto;
+    }
   </style>
 </body>
-</html> 
+</html>
