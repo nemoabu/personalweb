@@ -287,10 +287,10 @@ nav a:hover {
   animation: fadeInCard 0.6s ease forwards;
 }
 
-.experience-item:nth-child(1) { animation-delay: 0.2s; }
-.experience-item:nth-child(2) { animation-delay: 0.4s; }
-.experience-item:nth-child(3) { animation-delay: 0.6s; }
-.experience-item:nth-child(4) { animation-delay: 0.8s; }
+.experience-item:nth-child(1) { animation-delay: 1.2s; }
+.experience-item:nth-child(2) { animation-delay: 1.4s; }
+.experience-item:nth-child(3) { animation-delay: 1.6s; }
+.experience-item:nth-child(4) { animation-delay: 1.8s; }
 
 .experience-item:hover {
   transform: translateY(-4px);
