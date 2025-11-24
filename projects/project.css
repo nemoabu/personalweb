@@ -653,6 +653,7 @@ main {
 .all-work .project-card:nth-child(3) { animation-delay: 2.1s; }
 .all-work .project-card:nth-child(4) { animation-delay: 2.4s; }
 .all-work .project-card:nth-child(5) { animation-delay: 2.7s; }
+.all-work .project-card:nth-child(6) { animation-delay: 3.0s; }
 
 .project-card:hover {
   transform: translateY(-10px);
