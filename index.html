@@ -8,6 +8,67 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="icon" href="fav.png" type="image/png">
 
+  <style>
+    /* Styled tooltips for social icons (matches site purple aesthetic) */
+    .socials a {
+      color: #b36aff;
+      margin-right: 12px;
+      font-size: 1.25rem;
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .socials a[data-tooltip]::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%) translateY(6px);
+      background: rgba(24, 12, 42, 0.95);
+      color: #f3e8ff;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.15s ease, transform 0.15s ease;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+      border: 1px solid rgba(179,106,255,0.15);
+      z-index: 40;
+    }
+
+    .socials a[data-tooltip]::before {
+      content: '';
+      position: absolute;
+      bottom: calc(100% + 2px);
+      left: 50%;
+      transform: translateX(-50%) translateY(6px);
+      border-width: 6px;
+      border-style: solid;
+      border-color: rgba(24,12,42,0.95) transparent transparent transparent;
+      opacity: 0;
+      transition: opacity 0.15s ease, transform 0.15s ease;
+      z-index: 41;
+    }
+
+    .socials a[data-tooltip]:hover::after,
+    .socials a[data-tooltip]:focus::after {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .socials a[data-tooltip]:hover::before,
+    .socials a[data-tooltip]:focus::before {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Slightly darker icon color on hover */
+    .socials a:hover { color: #9a66ff; }
+  </style>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J90PYQT247"></script>
   <script>
@@ -44,13 +105,13 @@
 
     <!-- Social icons -->
     <div class="socials">  
-      <a href="https://www.linkedin.com/in/abdullokh-tulkinov/" target="_blank" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/abdullokh-tulkinov/" target="_blank" aria-label="LinkedIn" title="LinkedIn" data-tooltip="LinkedIn">
         <i class="fab fa-linkedin"></i>
       </a>
-      <a href="https://github.com/nemoabu" target="_blank" aria-label="GitHub">
+      <a href="https://github.com/nemoabu" target="_blank" aria-label="GitHub" title="GitHub" data-tooltip="GitHub">
         <i class="fab fa-github"></i>
       </a>
-      <a href="https://devpost.com/tabdullokh" target="_blank" aria-label="Devpost" title="Devpost">
+      <a href="https://devpost.com/tabdullokh" target="_blank" aria-label="Devpost" title="Devpost" data-tooltip="Devpost">
         <!-- Devpost logo (inline SVG) - sized to match other icons -->
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1.08em" height="1.08em" fill="currentColor" style="vertical-align:middle; display:inline-block; transform: translateY(-2px);" aria-hidden="true">
           <path d="M12 2l10 6v8l-10 6-10-6V8l10-6zm0 2.236L4.382 8 12 12.764 19.618 8 12 4.236zM6 9.382v5.236L12 17.764V9.382L6 9.382zM12 19.764l6-1.146V13.618L12 15.764v4z"/>
