@@ -547,6 +547,20 @@ nav a:hover {
   text-align: left;
 }
 
+.resume-links {
+  margin-top: 12px;
+}
+
+.resume-item {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.resume-label {
+  color: #aaa;
+  margin-right: 6px;
+}
+
 /* Purple highlight styles for key words */
 .highlight {
   color: #b36aff;
