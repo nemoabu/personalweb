@@ -610,15 +610,15 @@ main {
 /* Project Grids */
 .selected-work {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
   margin-bottom: 80px;
 }
 
 .all-work {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
 }
 
 /* Project Cards */
@@ -1988,6 +1988,19 @@ main {
 .comparison-table td:first-child {
   font-weight: 500;
   color: rgba(255, 255, 255, 0.9);
+}
+
+/* Tablet responsive - 2 columns */
+@media (max-width: 1200px) and (min-width: 769px) {
+  .selected-work {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .all-work {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
 }
 
 /* Mobile responsive - hide home text on small screens */

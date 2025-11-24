@@ -143,12 +143,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const serverModal = document.getElementById('serverModal');
     const setupModal = document.getElementById('setupModal');
     const doomsdayModal = document.getElementById('doomsdayModal');
+    const secruxityModal = document.getElementById('secruxityModal');
     const closeMuscl3Btn = document.getElementById('closeMuscl3Modal');
     const closeServerBtn = document.getElementById('closeServerModal');
     const closeSetupBtn = document.getElementById('closeSetupModal');
     const closeDoomsdayBtn = document.getElementById('closeDoomsdayModal');
+    const closeSecruxityBtn = document.getElementById('closeSecruxityModal');
     const impactLinks = document.querySelectorAll('.view-impact-btn');
-    const serverInfoBtn = document.querySelector('.btn-primary i.fas.fa-server').parentElement;
+    const serverInfoBtn = document.querySelector('.btn-primary i.fas.fa-server')?.parentElement;
 
     // Open modal when any impact link is clicked
     impactLinks.forEach(link => {
@@ -162,6 +164,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 serverModal.style.display = 'block';
             } else if (projectTitle.includes('muscl3')) {
                 muscl3Modal.style.display = 'block';
+            } else if (projectTitle.includes('secruxity')) {
+                secruxityModal.style.display = 'block';
             }
             document.body.style.overflow = 'hidden'; // Prevent background scrolling
         });
@@ -175,6 +179,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     closeServerBtn.addEventListener('click', function() {
         serverModal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    });
+
+    closeSecruxityBtn.addEventListener('click', function() {
+        secruxityModal.style.display = 'none';
         document.body.style.overflow = 'auto'; // Restore scrolling
     });
 
@@ -192,14 +201,20 @@ document.addEventListener("DOMContentLoaded", function() {
             doomsdayModal.style.display = 'none';
             document.body.style.overflow = 'auto';
         }
+        if (e.target === secruxityModal) {
+            secruxityModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
     });
 
     // Server Info button click handler
-    serverInfoBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        setupModal.style.display = 'block';
-        document.body.style.overflow = 'hidden';
-    });
+    if (serverInfoBtn) {
+        serverInfoBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            setupModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+    }
 
     // Doomsday Documentation button click handler
     const doomsdayBtn = document.querySelector('.view-doomsday-btn');
@@ -240,6 +255,10 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             if (doomsdayModal.style.display === 'block') {
                 doomsdayModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+            if (secruxityModal.style.display === 'block') {
+                secruxityModal.style.display = 'none';
                 document.body.style.overflow = 'auto';
             }
         }
