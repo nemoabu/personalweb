@@ -763,6 +763,58 @@ main {
   padding: 30px;
 }
 
+.project-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  gap: 0;
+}
+
+.project-meta h2 {
+  width: 100%;
+  margin-bottom: 0;
+  line-height: 1.5rem;
+}
+
+.project-info {
+  margin-top: 8px;
+  width: 100%;
+}
+
+.project-meta h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #b36aff;
+  margin: 0;
+}
+
+.hackathon-label {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #999;
+  font-style: italic;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.hackathon-label:hover {
+  color: #b36aff;
+  text-decoration: underline;
+}
+
+.project-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.team-size {
+  font-size: 0.85rem;
+  color: #888;
+  font-weight: 400;
+}
+
 .project-content h2 {
   font-size: 1.5rem;
   font-weight: 700;
@@ -2006,6 +2058,23 @@ main {
 
 /* Mobile responsive - hide home text on small screens */
 @media (max-width: 768px) {
+  .project-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .project-meta h2 {
+    font-size: 1.3rem;
+  }
+
+  .hackathon-label {
+    font-size: 0.85rem;
+  }
+
+  .team-size {
+    font-size: 0.8rem;
+  }
   .logo-text {
     display: none;
   }
