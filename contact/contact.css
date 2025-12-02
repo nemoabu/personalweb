@@ -234,60 +234,25 @@ nav a:hover {
   opacity: 0.8;
 }
 
-.contact .email {
-  display: inline-block;
-  font-size: 18px;
-  color: #b36aff;
-  text-decoration: none;
-  border: 1px solid #b36aff;
-  padding: 10px 20px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(179, 106, 255, 0.15);
-}
-
-.contact .email:hover {
-  background-color: #b36aff;
-  color: #000;
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(179, 106, 255, 0.3);
-}
-.email-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.copy-btn {
-  background-color: transparent;
-  border: 1px solid #b36aff;
-  color: #b36aff;
-  padding: 6px 18px;
-  font-size: 14px;
-  border-radius: 999px;
-  font-weight: 500;
-  cursor: pointer;
-  font-family: 'Segoe UI', sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-}
-
-.copy-btn:hover {
-  background-color: #b36aff;
-  color: #000;
-  transform: scale(1.05);
-  box-shadow: 0 0 8px rgba(179, 106, 255, 0.2);
+.contact .email,
+.contact .phone {
+  display: block;
+  margin-top: 4px;
+  font-size: 16px;
+  color: #e5e5e5;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+  opacity: 0.9;
 }
 
 
 @keyframes contactFadeIn {
   0% {
     opacity: 0;
-    margin-top: 20px;
+    transform: translateY(20px);
   }
   100% {
     opacity: 1;
-    margin-top: 0;
+    transform: translateY(0);
   }
 }
