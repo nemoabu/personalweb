@@ -27,8 +27,8 @@
   <main>
     <!-- Selected Work Section -->
     <section class="section-header">
-      <h1>Selected Work</h1>
-      <p>Featured projects that showcase my best work</p>
+      <h1>Things I've built</h1>
+      <p>Featured projects</p>
     </section>
 
     <div class="selected-work">
@@ -119,12 +119,12 @@
         </div>
         <div class="project-content">
           <div class="project-meta">
-            <h2>Linux Server</h2>
+            <h2>Homelab</h2>
             <div class="project-info">
               <span class="team-size">Solo</span>
             </div>
           </div>
-          <h3>Sustainable Home Infrastructure</h3>
+          <h3>Sustainable Linux Server</h3>
           <p>A self-hosted server that repurposes an old laptop into a private cloud using Tailscale's mesh network. Provides file storage, VPN, and Git services while promoting sustainability through reduced e-waste and power consumption.</p>
           <div class="tech-stack">
             <span class="tools-label">Tools used:</span> Linux, Tailscale, Git, Filebrowser, Power Optimization
@@ -141,7 +141,7 @@
     <!-- All Work Section -->
     <section class="section-header">
       <h1>All Work</h1>
-      <p>Complete portfolio of projects and experiments</p>
+      <p>All of my projects</p>
     </section>
 
     <div class="all-work">
@@ -615,304 +615,74 @@
       <div class="modal-body">
         <div class="setup-guide">
           <div class="guide-intro">
-            <div class="distro-selection">
-              <div class="distro-icons">
-                <div class="distro-icon active" title="Arch Linux">
-                  <div class="arch-logo"></div>
-                  <span class="distro-name">Arch</span>
-                </div>
-                <div class="distro-icon" title="Debian">
-                  <div class="debian-logo"></div>
-                  <span class="distro-name">Debian</span>
-                </div>
-                <div class="distro-icon" title="Fedora">
-                  <i class="fab fa-fedora"></i>
-                  <span class="distro-name">Fedora</span>
-                </div>
-                <div class="distro-icon" title="Ubuntu">
-                  <i class="fab fa-ubuntu"></i>
-                  <span class="distro-name">Ubuntu</span>
-                </div>
-              </div>
-              <p class="distro-note">While this guide uses Arch Linux, you can use any Linux distribution. Simply adapt the package installation commands to your distribution's package manager:</p>
-              <div class="package-managers">
-                <code>pacman -S</code> <span class="pkg-note">for Arch</span>
-                <code>apt install</code> <span class="pkg-note">for Debian/Ubuntu</span>
-                <code>dnf install</code> <span class="pkg-note">for Fedora</span>
-              </div>
+            <p class="distro-note">This guide uses Arch Linux. Adapt commands for your distribution:</p>
+            <div class="package-managers">
+              <code>pacman -S</code> <span class="pkg-note">Arch</span>
+              <code>apt install</code> <span class="pkg-note">Debian/Ubuntu</span>
+              <code>dnf install</code> <span class="pkg-note">Fedora</span>
             </div>
           </div>
 
           <section class="setup-section">
-            <h3><i class="fas fa-laptop"></i> Initial Setup</h3>
+            <h3>Initial Setup</h3>
             <div class="setup-steps">
               <ol>
-                <li>Install your chosen Linux distribution (minimal installation recommended)</li>
-                <li>Create a non-root user with sudo privileges</li>
-                <li>Update the system: <code>sudo pacman -Syu</code></li>
-                <li>Install essential packages:
-                  <code>sudo pacman -S base-devel git openssh tailscale</code>
-                </li>
+                <li>Install Linux (minimal installation)</li>
+                <li>Create non-root user with sudo</li>
+                <li><code>sudo pacman -Syu</code></li>
+                <li><code>sudo pacman -S base-devel git openssh tailscale</code></li>
               </ol>
-              <div class="info-box">
-                <i class="fas fa-info-circle"></i>
-                <p>A minimal installation reduces resource usage and attack surface, perfect for a dedicated server.</p>
-              </div>
             </div>
           </section>
 
-          <section class="setup-section">
-            <h3><i class="fas fa-network-wired"></i> Understanding Tailscale</h3>
-            <div class="setup-steps">
-              <div class="tailscale-explainer">
-                <div class="mesh-animation">
-                  <div class="mesh-node home">🏠</div>
-                  <div class="mesh-node laptop">💻</div>
-                  <div class="mesh-node phone">📱</div>
-                  <div class="mesh-node tablet">📱</div>
-                  <div class="mesh-lines"></div>
-                </div>
-                <div class="tailscale-info">
-                  <h4>How Tailscale Works</h4>
-                  <ul>
-                    <li><strong>Mesh Network:</strong> Creates a private network connecting all your devices</li>
-                    <li><strong>Zero Config:</strong> Automatically handles NAT traversal and routing</li>
-                    <li><strong>Security:</strong> End-to-end encryption between devices</li>
-                    <li><strong>Access Control:</strong> Granular permissions for device access</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
 
           <section class="setup-section">
-            <h3><i class="fas fa-bolt"></i> Optimization</h3>
+            <h3>Optimization <span class="section-desc">to reduce power consumption of device</span></h3>
             <div class="setup-steps">
-              <h4>Disable Unnecessary Services</h4>
-              <pre><code>sudo systemctl disable gdm        # Disable GUI
-sudo systemctl disable bluetooth  # Disable Bluetooth
-sudo rfkill block wifi          # Disable WiFi</code></pre>
-              
-              <h4>Power Management</h4>
-              <ol>
-                <li>Install TLP: <code>sudo pacman -S tlp tlp-rdw</code></li>
-                <li>Enable TLP: <code>sudo systemctl enable tlp.service</code></li>
-                <li>Configure in <code>/etc/tlp.conf</code>:
-                  <pre><code>CPU_SCALING_GOVERNOR_ON_AC=powersave
+              <pre><code>sudo systemctl disable gdm bluetooth
+sudo rfkill block wifi
+sudo pacman -S tlp tlp-rdw
+sudo systemctl enable tlp.service</code></pre>
+              <p>Configure <code>/etc/tlp.conf</code>:</p>
+              <pre><code>CPU_SCALING_GOVERNOR_ON_AC=powersave
 CPU_SCALING_GOVERNOR_ON_BAT=powersave
 WIFI_PWR_ON_AC=off
-WIFI_PWR_ON_BAT=off
-RUNTIME_PM_ON_AC=auto
-RUNTIME_PM_ON_BAT=auto</code></pre>
-                </li>
-              </ol>
-
-              <h4>Power Monitoring Tools</h4>
-              <div class="monitoring-tools">
-                <ol>
-                  <li>Install monitoring tools:
-                    <pre><code>sudo pacman -S powertop upower acpi</code></pre>
-                  </li>
-                  <li>Monitor real-time power usage:
-                    <pre><code># View detailed power consumption
-powertop
-
-# Check battery status and current draw
-upower -i /org/freedesktop/UPower/devices/battery_BAT0
-
-# Simple battery info
-acpi -V</code></pre>
-                  </li>
-                  <li>Long-term monitoring:
-                    <pre><code># Log power usage every 5 minutes
-while true; do
-  date >> power_log.txt
-  upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "energy-rate|percentage" >> power_log.txt
-  sleep 300
-done</code></pre>
-                  </li>
-                </ol>
-                <div class="info-box">
-                  <i class="fas fa-chart-line"></i>
-                  <p>These tools help verify the 10W power consumption target. PowerTOP especially shows detailed per-component power usage and suggests additional optimizations.</p>
-                </div>
-              </div>
+WIFI_PWR_ON_BAT=off</code></pre>
             </div>
           </section>
 
           <section class="setup-section">
-            <h3><i class="fas fa-shield-alt"></i> Tailscale Setup</h3>
+            <h3>Tailscale <span class="section-desc">simple no headache mesh network between all your devices</span></h3>
             <div class="setup-steps">
-              <ol>
-                <li>Start Tailscale service:
-                  <code>sudo systemctl start tailscaled</code>
-                </li>
-                <li>Connect to Tailscale network:
-                  <code>sudo tailscale up</code>
-                </li>
-                <li>Enable auto-start:
-                  <code>sudo systemctl enable tailscaled</code>
-                </li>
-                <li>Configure subnet routing (if needed):
-                  <code>sudo tailscale up --advertise-routes=192.168.0.0/24</code>
-                </li>
-              </ol>
+              <pre><code>sudo systemctl enable --now tailscaled
+sudo tailscale up</code></pre>
+              <p>For VPN (Exit Node):</p>
+              <pre><code>sudo tailscale up --advertise-exit-node</code></pre>
             </div>
           </section>
 
-          <section class="setup-section">
-            <h3><i class="fas fa-shield-alt"></i> Tailscale VPN Setup</h3>
-            <div class="setup-steps">
-              <div class="feature-showcase">
-                <h4>Understanding Tailscale VPN</h4>
-                <div class="feature-grid">
-                  <div class="feature-card">
-                    <div class="feature-icon">
-                      <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h5>Zero Config VPN</h5>
-                    <p>Unlike traditional VPNs, Tailscale requires no port forwarding or complex configuration. It just works.</p>
-                  </div>
-                  <div class="feature-card">
-                    <div class="feature-icon">
-                      <i class="fas fa-fingerprint"></i>
-                    </div>
-                    <h5>WireGuard Based</h5>
-                    <p>Built on WireGuard protocol for maximum security and performance with minimal overhead.</p>
-                  </div>
-                  <div class="feature-card">
-                    <div class="feature-icon">
-                      <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <h5>Mesh Network</h5>
-                    <p>Direct device-to-device connections when possible, with automatic fallback to relays when needed.</p>
-                  </div>
-                  <div class="feature-card">
-                    <div class="feature-icon">
-                      <i class="fas fa-key"></i>
-                    </div>
-                    <h5>Identity-based</h5>
-                    <p>Uses your identity provider (Google, GitHub, etc.) for authentication, no separate passwords needed.</p>
-                  </div>
-                </div>
-              </div>
-
-              <h4>VPN Setup</h4>
-              <ol>
-                <li>Install Tailscale:
-                  <pre><code>sudo pacman -S tailscale
-sudo systemctl enable --now tailscaled</code></pre>
-                </li>
-
-                <li>Connect to Tailscale network:
-                  <pre><code>sudo tailscale up</code></pre>
-                </li>
-
-                <li>Configure VPN (Exit Node):
-                  <div class="info-box">
-                    <i class="fas fa-info-circle"></i>
-                    <p>The repurposed laptop will act as your VPN server (Exit Node). This means all your other devices can route their internet traffic through it when needed.</p>
-                  </div>
-                  <pre><code># On the laptop (Exit Node Provider)
-sudo tailscale up --advertise-exit-node
-
-# Verify setup
-tailscale status    # Should show laptop as "Exit Node: yes"</code></pre>
-                </li>
-              </ol>
-
-              <div class="feature-tips">
-                <h4>Usage Tips</h4>
-                <ul>
-                  <li><strong>Server Role:</strong> Your laptop becomes a private VPN server for all your devices</li>
-                  <li><strong>Client Setup:</strong> Other devices can enable "Use Exit Node" in Tailscale settings to route traffic through the laptop</li>
-                  <li><strong>Multi-Device:</strong> Works across Linux, macOS, iOS, Android, and Windows</li>
-                </ul>
-              </div>
-
-              <div class="info-box">
-                <i class="fas fa-lightbulb"></i>
-                <p>With this setup, you can securely access your server and its services from any device, anywhere, without exposing ports to the internet.</p>
-              </div>
-            </div>
-          </section>
 
           <section class="setup-section">
-            <h3><i class="fab fa-git"></i> Git Server Setup</h3>
+            <h3>Git Server</h3>
             <div class="setup-steps">
-              <ol>
-                <li>Create git user:
-                  <code>sudo useradd -m -r git</code>
-                </li>
-                <li>Set up SSH keys:
-                  <pre><code>sudo mkdir -p /home/git/.ssh
+              <pre><code>sudo useradd -m -r git
+sudo mkdir -p /home/git/.ssh
 sudo cp ~/.ssh/authorized_keys /home/git/.ssh/
-sudo chown -R git:git /home/git/.ssh</code></pre>
-                </li>
-                <li>Create bare repository:
-                  <pre><code>sudo mkdir /srv/git
+sudo chown -R git:git /home/git/.ssh
+sudo mkdir /srv/git
 sudo chown git:git /srv/git
 git init --bare /srv/git/project.git</code></pre>
-                </li>
-              </ol>
             </div>
           </section>
 
           <section class="setup-section">
-            <h3><i class="fas fa-folder-open"></i> Filebrowser Setup</h3>
+            <h3>Filebrowser <span class="section-desc">(google drive but you own it)</span></h3>
             <div class="setup-steps">
-              <div class="feature-showcase">
-                <h4>Why Filebrowser?</h4>
-                <div class="feature-grid">
-                  <div class="feature-card">
-                    <div class="feature-icon">
-                      <i class="fas fa-feather"></i>
-                    </div>
-                    <h5>Elegant Simplicity</h5>
-                    <p>Clean, intuitive interface that makes file management feel natural. No bloat, just what you need.</p>
-                  </div>
-                  <div class="feature-card">
-                    <div class="feature-icon">
-                      <i class="fas fa-markdown"></i>
-                    </div>
-                    <h5>Markdown Support</h5>
-                    <p>Built-in markdown preview and editor, perfect for documentation and notes. Edit and view files directly in the browser.</p>
-                  </div>
-                  <div class="feature-card">
-                    <div class="feature-icon">
-                      <i class="fas fa-hand-pointer"></i>
-                    </div>
-                    <h5>Drag & Drop</h5>
-                    <p>Effortless file uploads with drag and drop support. Move and organize files just like your desktop.</p>
-                  </div>
-                  <div class="feature-card">
-                    <div class="feature-icon">
-                      <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h5>Mobile Friendly</h5>
-                    <p>Responsive design works great on all devices. Access your files from phone, tablet, or desktop.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="info-box">
-                <i class="fas fa-lightbulb"></i>
-                <p>Filebrowser's simplicity is its strength. It provides a clean, fast interface without unnecessary complications, making it perfect for personal file management.</p>
-              </div>
-
-              <h4>Installation Steps</h4>
-              <ol>
-                <li>Install Filebrowser:
-                  <pre><code>curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash</code></pre>
-                </li>
-                <li>Create config database:
-                  <code>filebrowser -d /etc/filebrowser.db config init</code>
-                </li>
-                <li>Set up admin user:
-                  <code>filebrowser -d /etc/filebrowser.db users add admin --password 'yourpassword'</code>
-                </li>
-                <li>Configure as service:
-                  <pre><code>[Unit]
+              <pre><code>curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash
+filebrowser -d /etc/filebrowser.db config init
+filebrowser -d /etc/filebrowser.db users add admin --password 'yourpassword'</code></pre>
+              <p>Create systemd service:</p>
+              <pre><code>[Unit]
 Description=Filebrowser Service
 After=network.target
 
@@ -923,75 +693,17 @@ Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target</code></pre>
-                </li>
-              </ol>
-
-              <div class="feature-tips">
-                <h4>Pro Tips</h4>
-                <ul>
-                  <li><strong>Share Links:</strong> Generate temporary share links for files with expiration times</li>
-                  <li><strong>File Preview:</strong> Preview images, videos, and documents directly in browser</li>
-                  <li><strong>Search:</strong> Quick file search with real-time results</li>
-                  <li><strong>Keyboard Shortcuts:</strong> Power-user features for fast navigation</li>
-                </ul>
-              </div>
             </div>
           </section>
 
-          <section class="setup-section">
-            <h3><i class="fas fa-rocket"></i> Future Expansions</h3>
-            <div class="expansion-options">
-              <div class="expansion-card">
-                <div class="expansion-icon">
-                  <i class="fas fa-film"></i>
-                </div>
-                <h4>Media Server</h4>
-                <p>Set up Plex or Jellyfin to stream your media collection across devices</p>
-                <div class="expansion-details">
-                  <code>sudo pacman -S jellyfin</code>
-                  <span class="port-info">Default port: 8096</span>
-                </div>
-              </div>
-
-              <div class="expansion-card">
-                <div class="expansion-icon">
-                  <i class="fas fa-music"></i>
-                </div>
-                <h4>Music Streaming</h4>
-                <p>Install Navidrome or Airsonic to access your music library anywhere</p>
-                <div class="expansion-details">
-                  <code>docker run -d navidrome/navidrome</code>
-                  <span class="port-info">Default port: 4533</span>
-                </div>
-              </div>
-
-              <div class="expansion-card">
-                <div class="expansion-icon">
-                  <i class="fas fa-cloud"></i>
-                </div>
-                <h4>Cloud Storage</h4>
-                <p>Deploy NextCloud for personal cloud storage and file sharing</p>
-                <div class="expansion-details">
-                  <code>sudo pacman -S nextcloud</code>
-                  <span class="port-info">Default port: 8080</span>
-                </div>
-              </div>
-            </div>
-            <div class="info-box">
-              <i class="fas fa-lightbulb"></i>
-              <p>Thanks to Tailscale's mesh network, all these services will be securely accessible from any of your devices!</p>
-            </div>
-          </section>
 
           <section class="setup-section">
-            <h3><i class="fas fa-sticky-note"></i> End Notes</h3>
-            <div class="setup-notes">
+            <h3>Things being worked on</h3>
+            <div class="setup-steps">
               <ul>
-                <li><strong>Backup Strategy:</strong> Set up regular backups using rsync or restic</li>
-                <li><strong>Monitoring:</strong> Install htop and iotop for resource monitoring</li>
-                <li><strong>Security:</strong> Configure UFW firewall and fail2ban</li>
-                <li><strong>Updates:</strong> Set up automatic security updates</li>
-                <li><strong>Documentation:</strong> Keep a log of all configurations</li>
+                <li>Docker</li>
+                <li>Kubernetes</li>
+                <li>Media server for movies and music</li>
               </ul>
             </div>
           </section>

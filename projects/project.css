@@ -1327,33 +1327,10 @@ main {
 }
 
 .setup-section {
-  background: linear-gradient(165deg, rgba(179, 106, 255, 0.08) 0%, rgba(179, 106, 255, 0.03) 100%);
-  border-radius: 16px;
+  background: rgba(17, 17, 17, 0.5);
+  border-radius: 8px;
   padding: 2rem;
-  border: 1px solid rgba(179, 106, 255, 0.15);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.setup-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, 
-    rgba(179, 106, 255, 0) 0%,
-    rgba(179, 106, 255, 0.3) 50%,
-    rgba(179, 106, 255, 0) 100%
-  );
-}
-
-.setup-section:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(179, 106, 255, 0.1);
+  border: 1px solid rgba(140, 90, 200, 0.1);
 }
 
 /* Guide Intro Styles */
@@ -1748,6 +1725,14 @@ main {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.section-desc {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #888;
+  font-style: italic;
+  margin-left: 0.5rem;
 }
 
 .setup-section h4 {
