@@ -838,25 +838,16 @@ main {
 
 /* Tech Stack */
 .tech-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  font-size: 0.9rem;
+  color: #bbb;
+  line-height: 1.6;
+  margin-top: 8px;
 }
 
-.tech-tag {
-  background: rgba(140, 90, 200, 0.2);
+.tools-label {
   color: #b36aff;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.8rem;
   font-weight: 500;
-  border: 1px solid rgba(140, 90, 200, 0.3);
-  transition: all 0.3s ease;
-}
-
-.tech-tag:hover {
-  background: rgba(140, 90, 200, 0.3);
-  transform: translateY(-1px);
+  margin-right: 6px;
 }
 
 /* Impact Link */
