@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const projectCard = this.closest('.project-card');
             const projectTitle = projectCard.querySelector('h2').textContent.toLowerCase();
             
-            if (projectTitle.includes('linux')) {
+            if (projectTitle.includes('linux') || projectTitle.includes('homelab')) {
                 serverModal.style.display = 'block';
             } else if (projectTitle.includes('muscl3')) {
                 muscl3Modal.style.display = 'block';

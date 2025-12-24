@@ -690,6 +690,15 @@ main {
   background: #000;
 }
 
+/* Special style for drawing tool image */
+.project-image img[alt="Drawing Tool"] {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+  margin: auto;
+  display: block;
+}
+
 .project-card:hover .project-image img {
   transform: scale(1.05);
 }
